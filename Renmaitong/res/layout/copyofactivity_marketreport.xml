@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+
+<RelativeLayout 
+    android:id="@+id/rl"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:background="@drawable/title_top3" 
+    android:layout_alignParentTop="true"
+    android:paddingRight="0dp"
+    android:layout_marginRight="0dp">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0"
+        android:singleLine="true"
+        android:text="个人位置上报"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+    <TextView
+        android:id="@+id/market_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:text="返回"/>
+
+</RelativeLayout>
+ <LinearLayout
+       android:id="@+id/ll_b"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_bar_bg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/market_paizhao"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/my_btn1"
+                android:padding="5.0dip"
+                android:text="拍照"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/my_btn1"
+                android:padding="5.0dip"
+                android:text="提交"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rl"
+    android:layout_above="@+id/ll_b"
+    >
+    
+      <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+    
+       <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_bg2"
+                    android:gravity="left"
+                    android:padding="3dp"
+                    android:text="前一日数据"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CX："
+                        android:textColor="@color/gray" />
+                    
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+                     <EditText
+				        android:id="@+id/market_et_cx"
+				        android:layout_width="fill_parent"
+				        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+				        android:background="@drawable/shape_edit"
+                        android:textCursorDrawable="@null"
+				        android:text=""
+				        android:singleLine="true"
+                        android:textColor="#232323"
+                        android:textSize="14sp"
+				        android:gravity="start|center_vertical"
+				        android:ems="10" 
+				        android:maxEms="10">
+				        <requestFocus />
+				    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_yq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="KF："
+                        android:textColor="@color/gray" />
+
+
+                    <EditText
+                        android:id="@+id/market_et_kf"
+                        android:layout_width="fill_parent"
+				        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shape_edit"
+                        android:ems="10"
+                        android:text=""
+                        android:textColor="#232323"
+				        android:gravity="start|center_vertical"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" >
+                    </EditText>
+                </LinearLayout>
+    
+   				 <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="KH："
+                        android:textColor="@color/gray" />
+
+                    <EditText
+                        android:id="@+id/market_et_kh"
+                        android:layout_width="fill_parent"
+				        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shape_edit"
+                        android:ems="10"
+				        android:gravity="start|center_vertical"
+                        android:text=""
+                        android:textColor="#232323"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" >
+                    </EditText>
+                </LinearLayout>
+    	</LinearLayout>
+    
+       <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+			  <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_bg2"
+                    android:gravity="left"
+                    android:padding="3dp"
+                    android:text="今日工作计划"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="上午："
+                        android:textColor="@color/gray" />
+                    
+                     <EditText
+				        android:id="@+id/market_et_sw"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+				        android:background="@drawable/shape_edit"
+                        android:textCursorDrawable="@null"
+				        android:text=""
+				        android:singleLine="false"
+				        android:lines="3"
+                        android:textColor="#232323"
+				        android:gravity="start"
+				        android:ems="10" 
+				        android:maxEms="10"
+				        android:textSize="14sp"
+				        android:maxLength="100">
+				    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_yq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="下午："
+                        android:textColor="@color/gray" />
+
+
+                    <EditText
+                        android:id="@+id/market_et_xw"
+                        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shape_edit"
+                        android:textCursorDrawable="@null"
+				        android:text=""
+				        android:singleLine="false"
+				        android:lines="3"
+                        android:textColor="#232323"
+				        android:gravity="start"
+				        android:ems="10" 
+				        android:maxEms="10"
+				        android:textSize="14sp"
+				        android:maxLength="100" >
+                    </EditText>
+                </LinearLayout>
+    
+    </LinearLayout>
+     <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9.0dip"
+        android:layout_marginRight="9.0dip"
+        android:layout_marginBottom="5.0dip"
+        />
+     </LinearLayout>
+  </ScrollView>
+  
+</RelativeLayout>

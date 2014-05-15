@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_bgcolor" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nav_companyinformation"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_top3" >
+
+        <TextView
+            android:id="@id/label_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/nav_right_layout"
+            android:layout_toRightOf="@id/nav_left_layout"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="3.0"
+            android:singleLine="true"
+            android:text="人员信息"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_companyinformation"
+        android:background="@drawable/sdr_layer_bg"
+        android:orientation="vertical"
+        android:paddingBottom="2.0px"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_chinese_name_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="人员姓名"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/chinese_name_clear"
+                android:layout_toRightOf="@id/input_chinese_name_label"
+                android:background="@color/transparent"
+                android:hint="必填"
+                android:inputType="text"
+                android:maxLength="80"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/cut_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_english_name_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="所在单位"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <Spinner
+                android:id="@+id/staffCompany"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/english_name_clear"
+                android:layout_toRightOf="@id/input_english_name_label"
+                android:background="@color/transparent"
+                android:hint="必填"
+                android:inputType="text"
+                android:maxLength="80"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/cut_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_department_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="所在部门"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffbumen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/department_clear"
+                android:layout_toRightOf="@id/input_department_label"
+                android:background="@color/transparent"
+                android:hint="必填"
+                android:inputType="text"
+                android:maxLength="100"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/cut_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_job_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="职务岗位"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffgangwei"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/job_clear"
+                android:layout_toRightOf="@id/input_job_label"
+                android:background="@color/transparent"
+                android:hint="必填"
+                android:inputType="text"
+                android:maxLength="100"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/cut_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_english_name_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="手机号码"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/english_name_clear"
+                android:layout_toRightOf="@id/input_english_name_label"
+                android:background="@color/transparent"
+                android:hint="@string/hint_optional"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/cut_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_department_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="办公电话"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/update_staffOfficePhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/department_clear"
+                android:layout_toRightOf="@id/input_department_label"
+                android:background="@color/transparent"
+                android:hint="@string/hint_optional"
+                android:inputType="phone"
+                android:maxLength="16"
+                android:padding="5.0dip"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/cut_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_job_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="家庭电话"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffHomePhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/job_clear"
+                android:layout_toRightOf="@id/input_job_label"
+                android:background="@color/transparent"
+                android:hint="@string/hint_optional"
+                android:inputType="phone"
+                android:maxLength="16"
+                android:padding="5.0dip"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_job_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="兴趣爱好"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffHobby"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/job_clear"
+                android:layout_toRightOf="@id/input_job_label"
+                android:background="@color/transparent"
+                android:hint="@string/hint_optional"
+                android:inputType="text"
+                android:maxLength="100"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@id/input_job_label"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:text="备注"
+                android:textColor="@color/trend_name_color"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/staffNote"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/job_clear"
+                android:layout_toRightOf="@id/input_job_label"
+                android:background="@color/transparent"
+                android:hint="@string/hint_optional"
+                android:inputType="text"
+                android:maxLength="100"
+                android:padding="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/my_tab_bg3" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:baselineAligned="true"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="45dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/staffUpdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/transparent"
+                    android:paddingBottom="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/my_update_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="提交更新"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="45dp"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/staffUpdateBack"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/ctd_icon"
+                    android:paddingBottom="13dp"
+                    android:paddingTop="3dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/my_back_btn" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="返回上层"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

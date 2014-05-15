@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ad_banner" android:background="@drawable/sqt_ad_rmt_gg" android:layout_width="fill_parent" android:layout_height="50.0dip" android:src="@drawable/sqt_overlay_light_dark_background" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_cut_line" />
+        <ImageButton android:id="@id/ad_clear" android:background="@color/transparent" android:padding="10.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/sqt_ad_rmt_closebtn_background" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/ctd_clear" />
+    </RelativeLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/sqt_list_line" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_cut_line" />
+</LinearLayout>

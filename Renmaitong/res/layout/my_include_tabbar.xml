@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/my_tab_bg3" android:layout_width="fill_parent" android:layout_height="45dp" 
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45dp" android:baselineAligned="true">
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+	            <ImageButton android:id="@id/tabbar1" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_tab_report_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+	      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="信息汇报" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+         <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+	            <ImageButton android:id="@id/tabbar2" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_tab_contact_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+	      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="通讯录管理" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+	            <ImageButton android:id="@id/tabbar4" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_tab_setting_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+	      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="系统设置" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+	            <ImageButton android:id="@id/tabbar5" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_tab_exit_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+	      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="退出系统" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

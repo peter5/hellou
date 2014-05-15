@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginRight="0dp"
+    android:background="@color/app_bgcolor"
+    android:paddingRight="0dp" >
+
+    <include
+        android:id="@id/include_nav"
+        layout="@layout/my_include_nav_information" />
+
+    <ScrollView
+        style="@style/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_nav" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="项目名称："
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/projectnameSpinner"
+                    style="@style/spinner_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:animationCache="true"
+                    android:drawSelectorOnTop="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="项目类型："
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/projectTypeSpinner"
+                    style="@style/spinner_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:animationCache="true"
+                    android:clickable="false"
+                    android:drawSelectorOnTop="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnPicture"
+                    android:layout_width="100dp"
+                    android:layout_height="40.0dip"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/my_btn1"
+                    android:padding="5.0dip"
+                    android:text="@string/takepicture"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp" />
+
+                <Button
+                    android:id="@+id/btnRecord"
+                    android:layout_width="100dp"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/my_btn1"
+                    android:padding="5.0dip"
+                    android:text="@string/takemove"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnGps"
+                    android:layout_width="100dp"
+                    android:layout_height="40.0dip"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/my_btn1"
+                    android:padding="5.0dip"
+                    android:text="@string/locationUpdate"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp" />
+
+                <Button
+                    android:id="@+id/btnAudio"
+                    android:layout_width="100dp"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="35.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/my_btn1"
+                    android:padding="5.0dip"
+                    android:text="录制音频"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/btn_cancle_bg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:text="个人位置上报"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp" />
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="13dp"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="10.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+     <LinearLayout
+          		android:layout_above="@id/include_tabbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical">
+     <LinearLayout
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+				<TextView
+			        android:id="@+id/reUpTv"
+			        android:layout_width="145dp"
+			        android:layout_height="fill_parent"
+			        android:ellipsize="end"
+			        android:gravity="left"
+			        android:singleLine="true"
+			        android:layout_marginLeft="18dp"
+			        android:visibility="invisible"
+			        android:text="jghsdjf"
+			        android:textColor="@color/black"
+			        android:textSize="14.0sp" />
+				<TextView
+				    android:id="@+id/yiUpTv"
+			        android:layout_width="145dp"
+			        android:layout_height="fill_parent"
+			        android:ellipsize="end"
+			        android:gravity="left"
+			        android:singleLine="true"
+			        android:layout_marginLeft="18dp"
+			        android:layout_marginTop="0dp"
+			        android:visibility="invisible"
+			        android:text="jghsdjf"
+			        android:textColor="@color/black"
+			        android:textSize="14.0sp" />
+				 </LinearLayout>
+				<Button
+                    android:id="@+id/btnReUp"
+                    android:layout_width="100dp"
+                    android:layout_height="40.0dip"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="50.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/my_btn1"
+                    android:padding="5.0dip"
+                    android:text="补传文件"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp" />
+	 </LinearLayout>
+    <include
+        android:id="@id/include_tabbar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/my_include_tabbar" />
+
+</RelativeLayout>

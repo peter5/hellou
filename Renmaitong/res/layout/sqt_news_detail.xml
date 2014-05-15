@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/appColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/sqt_include_nav" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/share_layout" android:background="@color/shareBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageView android:background="@color/navSplitLineColor" android:layout_width="fill_parent" android:layout_height="1.0px" android:adjustViewBounds="true" android:contentDescription="@string/ctd_cut_line" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="center" android:id="@id/share_wx" android:background="@drawable/sqt_nav_control_background" android:paddingBottom="3.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/ic_share_wx" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/sqt_wx_icon" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:contentDescription="@string/ctd_icon" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/grayText" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_to_wx" android:layout_below="@id/ic_share_wx" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <ImageView android:background="@color/navSplitLineColor" android:layout_width="1.0px" android:layout_height="fill_parent" android:adjustViewBounds="true" android:contentDescription="@string/ctd_cut_line" />
+                <RelativeLayout android:gravity="center" android:id="@id/share_weibo" android:background="@drawable/sqt_nav_control_background" android:paddingBottom="3.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/ic_share_weibo" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/sqt_ic_weibo" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:contentDescription="@string/ctd_icon" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/grayText" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_to_weibo" android:layout_below="@id/ic_share_weibo" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <ImageView android:background="@color/navSplitLineColor" android:layout_width="1.0px" android:layout_height="fill_parent" android:adjustViewBounds="true" android:contentDescription="@string/ctd_cut_line" />
+                <RelativeLayout android:gravity="center" android:id="@id/share_linkedin" android:background="@drawable/sqt_nav_control_background" android:paddingBottom="3.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/ic_share_linkedin" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/sqt_ic_linkedin" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:contentDescription="@string/ctd_icon" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/grayText" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_to_linkedin" android:layout_below="@id/ic_share_linkedin" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <ImageView android:background="@color/navSplitLineColor" android:layout_width="1.0px" android:layout_height="fill_parent" android:adjustViewBounds="true" android:contentDescription="@string/ctd_cut_line" />
+                <RelativeLayout android:gravity="center" android:id="@id/share_email" android:background="@drawable/sqt_nav_control_background" android:paddingBottom="3.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/ic_share_email" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/sqt_ic_email" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:contentDescription="@string/ctd_icon" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/grayText" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_to_email" android:layout_below="@id/ic_share_email" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <WebView android:scrollbarThumbVertical="@drawable/sqt_scrollbar" android:id="@id/web" android:focusableInTouchMode="true" android:scrollbars="vertical" android:drawingCacheQuality="high" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/share_layout" android:scrollbarDefaultDelayBeforeFade="50" />
+        <ImageButton android:id="@id/prev" android:background="@color/transparent" android:layout_width="38.0dip" android:layout_height="260.0dip" android:src="@drawable/sqt_contentview_left_pager" android:scaleType="fitStart" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/ctd_icon" />
+        <ImageButton android:id="@id/next" android:background="@color/transparent" android:layout_width="38.0dip" android:layout_height="260.0dip" android:src="@drawable/sqt_contentview_right_pager" android:scaleType="fitEnd" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/ctd_icon" />
+    </RelativeLayout>
+</LinearLayout>

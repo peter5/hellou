@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="45.0dip">
+        <include android:id="@id/include_nav" layout="@layout/include_nav" />
+        <include layout="@layout/pull_to_refresh_listview" />
+    </LinearLayout>
+    <include layout="@layout/item_add_meeting_comment" />
+</RelativeLayout>

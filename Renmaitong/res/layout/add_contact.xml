@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_companyinformation"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:background="@drawable/title_top3" 
+    android:layout_alignParentTop="true">
+
+
+
+    <TextView
+        android:id="@id/label_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/nav_right_layout"
+        android:layout_toRightOf="@id/nav_left_layout"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0"
+        android:singleLine="true"
+        android:text="添加单位/人员"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+
+	</RelativeLayout>
+    
+    <LinearLayout android:orientation="vertical" android:background="@drawable/sdr_layer_bg" android:paddingLeft="2.0px" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/nav_companyinformation">
+            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioGroup
+			        android:id="@+id/radiogroup_personal_condition"
+			        android:layout_width="200dp"
+			        android:layout_height="30dp"
+			        android:orientation="horizontal"
+			        android:padding="0dp"
+			        android:layout_margin="0dp">
+			        <RadioButton
+			            android:id="@+id/radiobutton_1"
+			            android:layout_width="100dp"
+			            android:layout_height="30dp"
+			            android:background="@drawable/my_tabradio"
+			            android:button="@null"
+			            android:checked="true"
+			             android:gravity="center"
+			             android:text="单位"
+			            android:textSize="18sp"
+			            android:textStyle="bold" 
+			            android:padding="0dp"
+			            android:layout_margin="0dp"/>
+			        <RadioButton
+			            android:id="@+id/radiobutton_2"
+			            android:layout_width="100dp"
+			            android:layout_height="30dp"
+			            android:background="@drawable/my_tabradio"
+			            android:button="@null"
+			             android:gravity="center"
+			             android:text="人员"
+			            android:textSize="18sp"
+			            android:textStyle="bold"
+			            android:padding="0dp"
+			            android:layout_margin="0dp" />
+			    </RadioGroup>
+			    <ImageView android:src="@drawable/tab_radio_line" android:layout_width="match_parent" android:layout_height="3dp" android:scaleType="fitXY" android:layout_below="@id/radiogroup_personal_condition"/>
+            </RelativeLayout>
+            <LinearLayout android:id="@+id/addContentLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout android:id="@+id/myCompanyContent"  android:paddingLeft="20dp" android:paddingRight="20dp" android:orientation="vertical" android:background="@drawable/sdr_layer_bg" android:paddingBottom="2.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_chinese_name_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="单位名称" android:layout_centerVertical="true" />
+		                <EditText android:id="@+id/addcompany_companyname" android:textSize="14.0sp" android:textColor="@color/black"  android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="必填" android:singleLine="true" android:maxLength="80" android:layout_toLeftOf="@id/chinese_name_clear" android:layout_toRightOf="@id/input_chinese_name_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_english_name_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="所在城市" android:layout_centerVertical="true" />
+		                <EditText android:id="@+id/addcompany_cityname" android:textSize="14.0sp" android:textColor="@color/black"  android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="必填" android:singleLine="true" android:maxLength="80" android:layout_toLeftOf="@id/english_name_clear" android:layout_toRightOf="@id/input_english_name_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="详细地址" android:layout_centerVertical="true" />
+		                <EditText android:id="@+id/addcompany_areaname" android:textSize="14.0sp" android:textColor="@color/black"  android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		             <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_english_name_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="邮政编码" android:layout_centerVertical="true" />
+		                <EditText android:id="@+id/addcompany_postCode" android:textSize="14.0sp" android:textColor="@color/black"  android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="80" android:layout_toLeftOf="@id/english_name_clear" android:layout_toRightOf="@id/input_english_name_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_department_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="办公电话" android:layout_centerVertical="true" />
+		                <EditText  android:id="@+id/addcompany_officeName" android:textSize="14.0sp" android:textColor="@color/black" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/department_clear" android:layout_toRightOf="@id/input_department_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="传真号码" android:layout_centerVertical="true" />
+		                <EditText android:id="@+id/addcompany_faxNumber" android:textSize="14.0sp" android:textColor="@color/black"  android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		             <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="备注" android:layout_centerVertical="true" />
+		                <EditText android:id="@+id/addcompany_companyNOte" android:textSize="14.0sp" android:textColor="@color/black"  android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60dp" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+	   	 		</LinearLayout>
+	   	 		
+		        <LinearLayout android:id="@+id/myStaffContent"  android:paddingLeft="20dp" android:paddingRight="20dp" android:orientation="vertical" android:background="@drawable/sdr_layer_bg"  android:paddingBottom="2.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/nav_companyinformation">
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_english_name_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="所在单位" android:layout_centerVertical="true" />
+		                <Spinner android:textSize="14.0sp" style="@style/spinner_style"  android:id="@+id/staffCompany" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="80" android:layout_toLeftOf="@id/english_name_clear" android:layout_toRightOf="@id/input_english_name_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_chinese_name_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="人员姓名" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffName" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="必填" android:singleLine="true" android:maxLength="80" android:layout_toLeftOf="@id/chinese_name_clear" android:layout_toRightOf="@id/input_chinese_name_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_department_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="所在部门" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffbumen" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="必填" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/department_clear" android:layout_toRightOf="@id/input_department_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="职务岗位" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffgangwei" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="必填" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		             <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_english_name_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="手机号码" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffPhone" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="80" android:layout_toLeftOf="@id/english_name_clear" android:layout_toRightOf="@id/input_english_name_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_department_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="办公电话" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffOfficePhone" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/department_clear" android:layout_toRightOf="@id/input_department_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <include layout="@layout/cut_line" />
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="家庭电话" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffHomePhone" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="兴趣爱好" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffHobby" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		             <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		                <TextView android:textSize="14.0sp" android:textColor="@color/trend_name_color" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="80dp" android:layout_height="wrap_content" android:text="备注" android:layout_centerVertical="true" />
+		                <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/staffNote" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_optional" android:singleLine="true" android:maxLength="100" android:layout_toLeftOf="@id/job_clear" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+		            </RelativeLayout>
+		    	</LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+    
+    <RelativeLayout android:background="@drawable/my_tab_bg3" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:layout_height="45dp" 
+ 	 xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45dp" android:baselineAligned="true">
+        <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="45dp" android:orientation="vertical" android:layout_weight="1.0">
+
+            <ImageButton
+                android:id="@+id/myUpdate"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:paddingBottom="10dp"
+                android:src="@drawable/my_update_btn" />
+
+        	<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="提交保存" android:textColor="@color/white" android:textSize="10dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false"/>
+        </RelativeLayout>
+          <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+            <ImageButton android:id="@+id/myAdd" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_add_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="继续添加" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+          <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+            <ImageButton android:id="@+id/myClear" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_clear_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="清空重填" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+            <ImageButton android:id="@+id/myBack" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_back_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="返回上层" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

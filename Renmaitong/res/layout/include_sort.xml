@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/app_layer_bgcolor" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/order_time_sort" android:background="@drawable/blue_button_2_background" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_margin="2.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/bot_sj_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/order_by_scan_time" />
+        <ImageView android:layout_gravity="top" android:id="@id/order_time_sort_arrow" android:layout_width="9.0dip" android:layout_height="5.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/bot_jiantou_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/order_name_sort" android:background="@drawable/blue_button_2_background" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_margin="2.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/bot_zm_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/order_by_word" />
+        <ImageView android:layout_gravity="top" android:id="@id/order_name_sort_arrow" android:layout_width="9.0dip" android:layout_height="5.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/bot_jiantou_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/order_company_sort" android:background="@drawable/blue_button_2_background" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_margin="2.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/bot_gs_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/order_by_company_name" />
+        <ImageView android:layout_gravity="top" android:id="@id/order_company_sort_arrow" android:layout_width="9.0dip" android:layout_height="5.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/bot_jiantou_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zlq.renmaitong"
+    android:versionCode="6"
+    android:versionName="3.1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+   	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+    
+	    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-feature android:name="android.hardware.microphone"/>	
+	
+	<supports-screens android:largeScreens="true"
+    android:normalScreens="true" android:smallScreens="true"
+    android:resizeable="true" android:anyDensity="true"/>
+	
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/myappicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name=".CrashApplication"
+        >
+        <activity
+            android:name="com.zlq.renmaitong.MainActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InformationReport"  android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden|navigation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" android:launchMode="singleTask"></activity>
+        <activity android:name=".ContactsManage" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"></activity>
+        <activity android:name=".SystemExit" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".SystemSetting" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".BingPhoneNumber" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".ResetPassword" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".CompanyInformation" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".BingPhoneSuccess" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".RestPasswordSuccess" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".StafInformation" android:configChanges="orientation|keyboardHidden"  android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name=".AddContact" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="h264.com.AndroidVideo"  android:screenOrientation="landscape" ></activity>
+        <activity android:name=".CameraVideoActivity" android:screenOrientation="landscape"></activity>
+        <activity android:name="com.cn.rtmp.CameraVideoActivity" android:configChanges="orientation|keyboardHidden"  android:screenOrientation="landscape"></activity>
+        <activity android:name="com.example.mybaidumap.MyMapActivity"></activity>
+        <activity android:name=".RecorderActivity" android:configChanges="orientation|keyboardHidden" android:screenOrientation="landscape"></activity>
+        <activity android:name=".AudioActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".SubMitLocation" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Test"></activity>
+        <activity android:name=".Test2"></activity>
+        <activity android:name=".Test3"></activity>
+        <activity android:name=".Test4"></activity>
+        <activity android:name=".Test5"></activity>
+    </application>
+
+</manifest>

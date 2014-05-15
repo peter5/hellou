@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:background="@drawable/title_top3" 
+    android:paddingRight="0dp"
+    android:layout_marginRight="0dp">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0"
+        android:singleLine="true"
+        android:text="个人位置上报"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+    <TextView
+        android:id="@+id/market_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:text="返回"/>
+
+</RelativeLayout>
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:text="CX："/>
+  <EditText
+        android:id="@+id/market_et"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:text=""
+        android:singleLine="true"
+        android:gravity="start"
+        android:ems="10" 
+        android:maxEms="10"
+        android:maxLength="13">
+        <requestFocus />
+    </EditText>
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:text="KF："/>
+<EditText
+        android:id="@+id/market_et2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:text=""
+        android:singleLine="true"
+        android:gravity="start"
+        android:ems="10" 
+        android:maxEms="10"
+        android:maxLength="13">
+    </EditText></LinearLayout>
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:text="KH："/>
+    <EditText
+        android:id="@+id/market_et3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:text=""
+        android:singleLine="true"
+        android:gravity="start"
+        android:ems="10"
+        android:maxEms="10" 
+        android:maxLength="13">
+
+    </EditText></LinearLayout>
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:text="QT："/>
+    <EditText
+        android:id="@+id/market_et4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:text=""
+        android:lines="3"
+        android:maxLines="3"
+        android:gravity="start"
+        android:maxLength="40">
+
+    </EditText></LinearLayout>
+  <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9.0dip"
+        android:layout_marginRight="9.0dip"
+        android:layout_marginTop="5.0dip"
+        />
+  
+  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/market_paizhao"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/my_btn1"
+                android:padding="5.0dip"
+                android:text="拍照"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/my_btn1"
+                android:padding="5.0dip"
+                android:text="提交"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+        </LinearLayout>
+  </ScrollView>
+  
+  <!-- 
+  <Button
+      android:id="@+id/market_paizhao"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5.0dip"
+      android:text="拍照" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:text="提交"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+ -->
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<TabHost
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="200dp"
+            android:layout_height="30dp" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ViewFlipper
+			        android:id="@+id/flipper1"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent" >
+			    </ViewFlipper>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ViewFlipper
+			        android:id="@+id/flipper2"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent" >
+			    </ViewFlipper>                
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>    
+
+</LinearLayout>

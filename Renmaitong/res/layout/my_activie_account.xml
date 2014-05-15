@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10.0dip"
+        android:layout_centerInParent="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@color/transparent"
+            android:descendantFocusability="beforeDescendants" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="MPS  外勤项目管理系统"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/select_industy"
+            style="@style/input_cell2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/xkk_bg"
+            android:descendantFocusability="beforeDescendants" >
+
+            <ImageView
+                android:id="@+id/userNameSpinner"
+                style="@style/input_clear"
+                android:contentDescription="@string/ctd_clear"
+                android:src="@drawable/xl_jt" />
+
+            <EditText
+                android:id="@+id/userName"
+                style="@style/input_edit"
+                android:layout_width="160dp"
+                android:layout_toLeftOf="@id/userNameSpinner"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/hint_input_username"
+                android:text="" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/userName"
+                android:gravity="center"
+                android:text="帐号"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/input_cell2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" >
+
+            <ImageButton
+                android:id="@+id/userPassword_clear"
+                style="@style/input_clear"
+                android:contentDescription="@string/ctd_clear" />
+
+            <EditText
+                android:id="@+id/userPassword"
+                style="@style/input_edit"
+                android:layout_width="160dp"
+                android:layout_toLeftOf="@id/userPassword_clear"
+                android:clickable="false"
+                android:hint="@string/hint_input_userpassword"
+                android:password="true"
+                android:text="" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/userPassword"
+                android:gravity="center"
+                android:text="密码"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/check_phone_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/transparent"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip" >
+
+
+            <CheckBox
+                android:id="@+id/remeber_number"
+                style="@style/Weight.CompoundButton.BlueCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/text_remeber_number"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@id/remeber_number"
+                android:layout_marginLeft="10dp"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="50.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_button_darklight"
+                android:padding="5.0dip"
+                android:text="@string/loginBtn"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/btnSetting"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="50.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_button_darklight"
+                android:padding="5.0dip"
+                android:text="设置"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="f"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
