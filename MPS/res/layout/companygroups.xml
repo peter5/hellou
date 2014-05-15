@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <LinearLayout android:orientation="vertical" android:id="@id/search_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/include_nav">
+        <RelativeLayout android:background="@drawable/input_cell_background" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+            <ImageView android:id="@id/ic_glass" android:layout_width="18.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_glass" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/ctd_icon" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:hint="@string/hint_search_of_company_groups" android:layout_toRightOf="@id/ic_glass" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/search_layout">
+        <include layout="@layout/pull_to_refresh_listview" />
+        <com.jiutong.client.android.widget.PinyinSideBar android:id="@id/side_bar" android:layout_width="25.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

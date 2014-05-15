@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_bg"
+    android:gravity="center_horizontal" >
+    
+
+    
+    <RelativeLayout
+        android:id="@id/check_phone_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="92dp"
+        android:layout_marginLeft="110dp"
+        android:background="@color/transparent"
+        android:descendantFocusability="beforeDescendants"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/login_mps_img" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:text="医药信息在线"
+        android:textColor="@color/black"
+        android:textScaleX="1.1"
+        android:textSize="48sp" />
+ 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+    
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/red_button_background"
+            android:text="登            录" 
+            android:textSize="14.0sp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btnSetting"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginRight="150dp"
+            android:background="@drawable/red_button_background"
+            android:text="设            置" 
+            android:textSize="14.0sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+ 
+    <CheckBox
+        android:id="@+id/remeber_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/textView1"
+        style="@style/Weight.CompoundButton.BlueCheckBox"/>
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/remeber_number"
+        android:layout_alignBottom="@+id/remeber_number"
+        android:layout_marginLeft="0dp"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:text="记住密码" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/remeber_number"
+        android:layout_alignLeft="@+id/textView1"
+         android:layout_marginBottom="15dp"
+        android:textColor="@color/black" 
+        android:textSize="16sp" 
+        android:gravity="center"
+        android:text="密           码：" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_marginBottom="35dp"
+        android:text="用           户：" 
+        android:textColor="@color/black" 
+        android:textSize="16sp" 
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_height="wrap_content"
+        android:layout_width="230dp" 
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_marginLeft="39dp"
+        android:text="" 
+        android:hint="@string/hint_input_username"
+        android:focusable="true"
+        android:focusableInTouchMode="true" 
+        android:clickable="true" 
+        android:maxLength="20"
+        android:background="@drawable/et_search_bg" />
+
+    <EditText
+        android:id="@+id/userPassword"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/userName"
+        android:password="true" 
+        android:maxLength="20"
+        android:clickable="false"
+        android:hint="@string/hint_input_userpassword"
+        android:background="@drawable/et_search_bg" >
+
+    </EditText>
+
+   
+    <ImageView
+        android:id="@+id/userNameSpinner"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/userName"
+        android:layout_marginTop="1dp"
+        android:layout_alignRight="@+id/userName"
+        android:src="@drawable/xl_jt" 
+        android:contentDescription="@string/ctd_clear"  />
+
+    <ImageView
+        android:id="@+id/userPassword_clear"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/userPassword"
+        android:layout_alignRight="@+id/userPassword"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/clear" 
+        android:contentDescription="@string/ctd_clear" />
+
+    <TextView
+        android:id="@+id/tvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/check_phone_layout"
+        android:layout_alignBaseline="@+id/remeber_number"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="15dp" 
+        android:text="现场演示" />
+    <CheckBox
+        android:id="@+id/zlCheckBox"
+        style="@style/Weight.CompoundButton.BlueCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_toRightOf="@+id/tvv"
+        android:checked="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_below="@+id/textView1"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

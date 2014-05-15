@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/nav_layout" android:background="@drawable/nav_title_background" android:layout_width="fill_parent" android:layout_height="@dimen/app_title_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/nav_left_layout" android:visibility="invisible" android:layout_width="53.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@id/nav_left" android:background="@drawable/nav_control_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_control_menu" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_button" />
+        <ImageView android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_cut_line" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_button" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/nav_right_layout" android:visibility="invisible" android:layout_width="53.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageView android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_cut_line" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+        <ImageButton android:id="@id/nav_right" android:background="@drawable/nav_control_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_control_refresh" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+    </LinearLayout>
+    <ImageView android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="4.0dip" android:src="@drawable/title_9rmt" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_centerInParent="true" android:contentDescription="@string/ctd_icon" />
+</RelativeLayout>

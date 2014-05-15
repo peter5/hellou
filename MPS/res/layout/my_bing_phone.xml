@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_setting"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:background="@drawable/title_top3" 
+    android:layout_alignParentTop="true">
+
+    <LinearLayout android:orientation="horizontal" android:id="@id/nav_left_layout" android:layout_width="53.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@+id/title_back" android:background="@drawable/title_top3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/titile_back2" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+        
+    </LinearLayout>     
+    <TextView
+        android:paddingRight="53dp"
+        android:id="@id/label_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/nav_right_layout"
+        android:layout_toRightOf="@id/nav_left_layout"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0"
+        android:singleLine="true"
+        android:text="@string/phoneNumberBing"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+	</RelativeLayout>
+	
+	<RelativeLayout android:id="@+id/bindphoneContent" android:layout_width="fill_parent" android:layout_height="300dp" android:orientation="vertical" android:layout_below="@id/nav_setting">	       
+        <LinearLayout android:id="@+id/yourCountlayout" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingLeft="10dp" android:paddingRight="10dp">
+  		<TextView android:textSize="14.0sp" android:textColor="@color/black" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip"  android:layout_marginRight="3.0dip" android:text="@string/yourCount" />
+            <RelativeLayout style="@style/input_cell">
+                <EditText android:id="@+id/bindUserName"  android:layout_toLeftOf="@id/account_clear" android:inputType="text" style="@style/input_edit" android:enabled="false"/>
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <LinearLayout android:id="@+id/yourPasswordLayout" android:layout_below="@id/yourCountlayout" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content"  android:paddingLeft="10dp" android:paddingRight="10dp">
+  		<TextView android:textSize="14.0sp" android:textColor="@color/black" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip"  android:layout_marginRight="3.0dip" android:text="@string/pleaseInputPassword" />
+            <RelativeLayout style="@style/input_cell">
+                <EditText android:id="@+id/bindPasswordET" android:hint="@string/hintPassword" android:layout_toLeftOf="@id/account_clear"  style="@style/input_edit"  android:inputType="textPassword" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <LinearLayout android:id="@+id/yourPhoneNumber" android:layout_below="@id/yourPasswordLayout" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content"  android:paddingLeft="10dp" android:paddingRight="10dp">
+  		<TextView android:textSize="14.0sp" android:textColor="@color/black" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip"  android:layout_marginRight="3.0dip"  android:text="@string/pleaseInputPhoneNumber" />
+            <RelativeLayout style="@style/input_cell">
+                <EditText android:id="@+id/bindPhoneET" android:hint="@string/hintPhoneNumber" android:layout_toLeftOf="@id/account_clear"  style="@style/input_edit"  android:inputType="phone"/>
+            </RelativeLayout>
+        </LinearLayout>
+      
+    </RelativeLayout>
+
+	<RelativeLayout android:background="@drawable/my_tab_bg3" android:layout_width="fill_parent" android:layout_height="45dp" android:layout_alignParentBottom="true" 
+	  xmlns:android="http://schemas.android.com/apk/res/android">
+	    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+	         <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+	            <ImageButton android:id="@+id/bindNumberMV" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_bindphone_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+	      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="手机绑定" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        	</RelativeLayout>
+	        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+	            <ImageButton android:id="@+id/bingNumberBackMV" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="match_parent" android:paddingBottom="13dp" android:paddingTop="3dp" android:src="@drawable/my_back_btn" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+	      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="返回上层" android:textColor="@color/white" android:textSize="10dp" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"/>
+        	</RelativeLayout>
+	    </LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

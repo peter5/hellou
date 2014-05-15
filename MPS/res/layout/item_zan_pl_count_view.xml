@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/zan_icon" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:id="@id/text_zan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/zero" />
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/pl_icon" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:id="@id/text_pl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/zero" />
+    </LinearLayout>
+    <include layout="@layout/cut_line" />
+</LinearLayout>

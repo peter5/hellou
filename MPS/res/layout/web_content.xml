@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <WebView android:scrollbarThumbVertical="@drawable/scrollbar" android:scrollbarStyle="outsideOverlay" android:id="@id/webView" android:background="@color/app_bgcolor" android:focusableInTouchMode="true" android:scrollbars="vertical" android:fadingEdge="none" android:drawingCacheQuality="high" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include_nav" />
+    <ProgressBar android:id="@id/loading_bar" android:layout_centerInParent="true" style="@style/Widget.ProgressBar.Blue" />
+</RelativeLayout>

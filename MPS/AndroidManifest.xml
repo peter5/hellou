@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.vov.vitamio"
+    android:versionCode="5"
+    android:versionName="3.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="14" />
+    <!-- 百度定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+    <!-- 百度定位 -->
+         <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+         <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 
+    
+    
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    
+    
+	<!-- 
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+   	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	 -->
+	<uses-feature android:name="android.hardware.microphone"/>	
+	
+	<supports-screens android:largeScreens="true"
+    android:normalScreens="true" android:smallScreens="true"
+    android:resizeable="true" android:anyDensity="true"/>
+	
+    
+    <application
+        android:name="com.zlq.mps.LocationApp"
+        android:allowBackup="true"
+        android:icon="@drawable/app_img"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        >
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+		<!--  		<intent-filter>
+					<action android:name="com.baidu.location.service_v2.9"></action>
+					</intent-filter>-->
+		</service>
+        <!-- 
+         <receiver android:name="com.zlq.util.NetworkStateReceiver">
+        	<intent-filter>
+        		<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+        		<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </receiver>
+         -->
+        <activity
+            android:name="com.zlq.mps.MainActivity3"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+             android:screenOrientation="landscape"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        
+        <activity android:name="com.zlq.mps.BrowsePage" android:screenOrientation="landscape"></activity>
+        
+         <activity android:name="com.zlq.mps.BrowsePage2" android:screenOrientation="landscape"></activity>
+        
+        <activity android:name="com.zlq.mps.RecorderActivity2"></activity>
+        <activity android:name="com.artifex.mupdf.MuPDFActivity"></activity>
+        <activity android:name="com.zlq.mps.PMediaPlayer"></activity>
+        <activity android:name="com.zlq.mps.PMediaPlayer2"></activity>
+        <activity android:name="com.zlq.mps.PMediaPlayer3"></activity>
+        
+        
+        <activity android:name="com.zlq.renmaitong.InformationReport"  android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden|navigation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" android:launchMode="singleTask"></activity>
+        <activity android:name="com.zlq.renmaitong.ContactsManage" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"></activity>
+        <activity android:name="com.zlq.renmaitong.SystemExit" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.SystemSetting" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.BingPhoneNumber" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.ResetPassword" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.CompanyInformation" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.BingPhoneSuccess" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.RestPasswordSuccess" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.StafInformation" android:configChanges="orientation|keyboardHidden"  android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="com.zlq.renmaitong.AddContact" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+        <activity android:name="h264.com.AndroidVideo"  android:screenOrientation="landscape" ></activity>
+        <activity android:name="com.zlq.renmaitong.CameraVideoActivity" android:screenOrientation="landscape"></activity>
+        <activity android:name="com.cn.rtmp.CameraVideoActivity" android:configChanges="orientation|keyboardHidden"  android:screenOrientation="landscape"></activity>
+        <activity android:name="com.example.mybaidumap.MyMapActivity"></activity>
+        <activity android:name="com.zlq.renmaitong.RecorderActivity" android:configChanges="orientation|keyboardHidden" android:screenOrientation="landscape"></activity>
+        <activity android:name="com.zlq.renmaitong.AudioActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.zlq.mps.Test"></activity>
+        <activity android:name="com.zlq.mps.Test2"></activity>
+        <activity android:name="com.zlq.mps.Test3"></activity>
+        <activity android:name="com.zlq.mps.Test4"></activity>
+        <activity android:name="com.zlq.mps.Test5"></activity>
+    </application>
+
+</manifest>

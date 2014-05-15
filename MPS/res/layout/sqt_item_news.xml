@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/sqt_news_item_background" android:padding="8.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_loading" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/textGray" android:id="@id/time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_loading" android:singleLine="true" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/textGray" android:ellipsize="end" android:id="@id/intro" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/text_loading" android:maxLines="2" android:lines="2" android:minLines="2" />
+</LinearLayout>

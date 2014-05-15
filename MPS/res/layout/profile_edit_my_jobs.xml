@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <ScrollView android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include_nav" style="@style/scroll_view">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/item_edit_my_profile_job_info" />
+            </LinearLayout>
+            <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/button_add" android:background="@drawable/silver_button_2_background" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:text="@string/text_add_jobs_experience" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

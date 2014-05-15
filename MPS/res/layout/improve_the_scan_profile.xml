@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include_nav">
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/text_synch_percentage" android:background="@color/black" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_tips_improve_scan_card" />
+        <ScrollView android:id="@id/content_layout" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/scroll_view">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/input_cell_background" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+                    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_chinese_name_label" android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="wrap_content" android:text="@string/text_profile_text_chinese_name" android:layout_centerVertical="true" />
+                        <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_chinese_name" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_input_chinese_name" android:singleLine="true" android:maxLength="30" android:layout_toRightOf="@id/input_chinese_name_label" android:layout_centerVertical="true" android:inputType="text" />
+                    </RelativeLayout>
+                    <include layout="@layout/cut_line" />
+                    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_english_name_label" android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="wrap_content" android:text="@string/text_profile_text_english_name" android:layout_centerVertical="true" />
+                        <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_english_name" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_input_english_name" android:singleLine="true" android:maxLength="30" android:layout_toRightOf="@id/input_english_name_label" android:layout_centerVertical="true" android:inputType="text" />
+                    </RelativeLayout>
+                    <include layout="@layout/cut_line" />
+                    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_company_label" android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="wrap_content" android:text="@string/text_profile_text_company" android:layout_centerVertical="false" />
+                        <EditText android:textSize="14.0sp" android:textColor="@color/black" android:gravity="top|left|center" android:id="@id/input_company" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_input_company_info" android:singleLine="false" android:maxLength="50" android:layout_toRightOf="@id/input_company_label" android:inputType="text" />
+                    </RelativeLayout>
+                    <include layout="@layout/cut_line" />
+                    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_department_label" android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="wrap_content" android:text="@string/text_profile_text_department" android:layout_centerVertical="true" />
+                        <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_department" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_input_department_info" android:singleLine="true" android:maxLength="30" android:layout_toRightOf="@id/input_department_label" android:layout_centerVertical="true" android:inputType="text" />
+                    </RelativeLayout>
+                    <include layout="@layout/cut_line" />
+                    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_job_label" android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="wrap_content" android:text="@string/text_profile_text_job" android:layout_centerVertical="true" />
+                        <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/input_job" android:background="@color/transparent" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_input_job_info" android:singleLine="true" android:maxLength="30" android:layout_toRightOf="@id/input_job_label" android:layout_centerVertical="true" android:inputType="text" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/profile_content_layout" android:background="@drawable/input_cell_nofocus_background" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="150.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

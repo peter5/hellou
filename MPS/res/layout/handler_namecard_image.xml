@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/card_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" android:contentDescription="@string/ctd_nothing" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageButton android:id="@id/rotate_right" android:background="@color/transparent" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_margin="10.0dip" android:src="@drawable/bt_rotate_right_background" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+            <ImageButton android:id="@id/rotate_left" android:background="@color/transparent" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_margin="10.0dip" android:src="@drawable/bt_rotate_left_background" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

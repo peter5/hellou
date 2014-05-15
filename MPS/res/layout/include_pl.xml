@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/action_zan" android:layout_width="63.0dip" android:layout_height="37.0dip" android:src="@drawable/z_leftbtn_background" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+    <ImageView android:id="@id/action_pl" android:layout_width="63.0dip" android:layout_height="37.0dip" android:src="@drawable/z_rightbtn_background" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+</LinearLayout>

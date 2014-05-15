@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/list_item_background" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="70.0dip">
+        <include android:id="@id/user_icon" layout="@layout/user_icon_59" />
+        <ImageView android:id="@id/arrow_right" android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+        <RelativeLayout android:id="@id/content_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_toLeftOf="@id/arrow_right" android:layout_toRightOf="@id/user_icon" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <LinearLayout android:orientation="horizontal" android:id="@id/weibo_bind_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="13.0sp" android:textColor="@color/black" android:id="@id/text_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_loading" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/ic_sina_weibo" android:padding="1.0dip" android:layout_width="20.0dip" android:layout_height="16.0dip" android:layout_marginLeft="2.0dip" android:src="@drawable/wb_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/linkedin_bind_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="13.0sp" android:textColor="@color/black" android:id="@id/text_info2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_loading" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/ic_linkedin" android:padding="1.0dip" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="2.0dip" android:src="@drawable/linkedin_list_icon" android:scaleType="centerInside" android:contentDescription="@string/ctd_icon" />
+                </LinearLayout>
+>
+</LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:id="@id/text_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_loading" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <include layout="@layout/cut_line" />
+</LinearLayout>

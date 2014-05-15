@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include_nav" style="@style/scroll_view">
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/text_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/text_active_yout_email_account_tips" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/button_ok" android:background="@drawable/blue_button_3_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/text_ok" android:layout_weight="1.0" />
+                <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/button_resent" android:background="@drawable/silver_button_3_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/text_active_code_resent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/button_unregister" android:background="@drawable/silver_button_3_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/text_again_register_user" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

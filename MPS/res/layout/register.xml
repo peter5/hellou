@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav_rmt9_title" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include_nav" style="@style/scroll_view">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/text_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/text_bind_phone_or_email" />
+                <RelativeLayout style="@style/input_cell">
+                    <TextView android:text="@string/text_account" style="@style/input_label" />
+                    <ImageButton android:id="@id/account_clear" android:contentDescription="@string/ctd_clear" style="@style/input_clear" />
+                    <EditText android:id="@id/input_account" android:hint="@string/hint_text_input_account" android:layout_toLeftOf="@id/account_clear" android:inputType="text" style="@style/input_edit" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/password_layout" style="@style/input_cell">
+                    <TextView android:text="@string/text_password" style="@style/input_label" />
+                    <ImageButton android:id="@id/password_clear" android:contentDescription="@string/ctd_clear" style="@style/input_clear" />
+                    <EditText android:id="@id/input_password" android:hint="@string/hint_text_input_password" android:maxLength="10" android:digits="@string/digits_password" android:layout_toLeftOf="@id/password_clear" android:inputType="textPassword" style="@style/input_edit" />
+                </RelativeLayout>
+                <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/button_register" android:background="@drawable/silver_button_3_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/text_register_user" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/account_input_tips" android:background="@drawable/register_mobile_account_tips" android:paddingLeft="15.0px" android:paddingTop="30.0px" android:paddingRight="20.0px" android:paddingBottom="20.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="40.0dip" android:text="@string/text_account_input_tips" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

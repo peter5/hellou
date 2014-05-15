@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_nav" layout="@layout/include_nav" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/corner_cell_no_focus_background" android:padding="1.0dip" android:clipToPadding="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip">
+        <RelativeLayout android:id="@id/check_phone_layout" android:background="@drawable/cell_top_grey_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/check_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/Weight.CompoundButton.BlueCheckBox" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/text_private_setting_phone" android:layout_toLeftOf="@id/check_phone" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout android:id="@id/check_email_layout" android:background="@drawable/cell_bottom_grey_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/check_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/Weight.CompoundButton.BlueCheckBox" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/text_private_setting_email" android:layout_toLeftOf="@id/check_email" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
