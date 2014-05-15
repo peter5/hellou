@@ -500,7 +500,6 @@ public class SubMitLocation extends Activity {
 		
 		@Override
 		protected void onStart() {
-			// TODO Auto-generated method stub
 			log("======================================onStarty");
 			super.onStart();
 		}
