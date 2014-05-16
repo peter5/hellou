@@ -113,6 +113,10 @@ public class SubMitLocation extends Activity {
 			private String _content_xw = "";
 			@Override
 			public void onClick(View v) {
+				if (!MyUtil.isNetworkAvailable(SubMitLocation.this)) {
+					Toast.makeText(SubMitLocation.this, "网络未连接！",  Toast.LENGTH_SHORT).show();
+					return;
+				}
 				final String _content_cx = content_CX.getText().toString().trim();
 				final String _content_kf = content_KF.getText().toString().trim();
 				final String _content_kh = content_KH.getText().toString().trim();
@@ -134,6 +138,15 @@ public class SubMitLocation extends Activity {
 					Toast.makeText(SubMitLocation.this, "KH不能为空！",  Toast.LENGTH_SHORT).show();
 					return;
 				}
+				if (_content_sw.equals("")) {
+					Toast.makeText(SubMitLocation.this, "AM不能为空！",  Toast.LENGTH_SHORT).show();
+					return;
+				}
+				if (_content_xw.equals("")) {
+					Toast.makeText(SubMitLocation.this, "PM不能为空！",  Toast.LENGTH_SHORT).show();
+					return;
+				}
+				
 				progressDialog = ProgressDialog.show(SubMitLocation.this, null, "正在上传..",
 	    				true, true);
 				new Thread(){  
