@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_companyinformation"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:background="@drawable/title_top3" 
+    android:layout_alignParentTop="true">
+
+
+
+    <TextView
+        android:id="@id/label_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/nav_right_layout"
+        android:layout_toRightOf="@id/nav_left_layout"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0"
+        android:singleLine="true"
+        android:text="添加单位/人员"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+
+	</RelativeLayout>
+    
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myAddTab" android:layout_width="match_parent"
+    android:layout_height="350dp" android:layout_below="@id/nav_companyinformation">
+
+    <TextView android:id="@+id/view1"
+        android:background="@drawable/zan_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="tabs_1_tab_1"/>
+
+    <TextView android:id="@+id/view2"
+        android:background="@drawable/zan_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="tabs_1_tab_2"/>
+
+    <TextView android:id="@+id/view3"
+        android:background="@drawable/zan_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="tabs_1_tab_3"/>
+
+	</FrameLayout>
+    
+    
+    <RelativeLayout android:background="@drawable/my_tab_bg3" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:layout_height="45dp" 
+ 	  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45dp" android:baselineAligned="true">
+        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="45dp" android:orientation="vertical" android:layout_weight="1.0">
+
+            <ImageButton
+                android:id="@id/tabbar1"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_report" />
+
+        	<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="信息汇报" android:textColor="@color/white" android:textSize="10dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="45dp" android:layout_weight="1.0">
+            <ImageButton android:id="@id/tabbar5" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="30dp" android:src="@drawable/tab_exit" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/ctd_icon" />
+      		<TextView android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center_horizontal"  android:text="退出系统" android:textColor="@color/white" android:textSize="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>
+
+
+

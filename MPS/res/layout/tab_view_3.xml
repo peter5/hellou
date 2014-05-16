@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/scan_card_repeat_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout1" android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/button_scan_card" android:background="@drawable/silver_button_2_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:text="@string/text_scan_card" android:layout_weight="1.0" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/scan_card_x_hot_line" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/button_card_folder" android:background="@drawable/silver_button_2_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:text="@string/text_business_card_holder" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/image1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/scan_card_y_hot_line" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_above="@id/layout1" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/scan_card_bg" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_above="@id/image1" />
+</RelativeLayout>

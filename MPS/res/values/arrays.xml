@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="meeting_countries">
+        <item>中国</item>
+        <item>日本</item>
+        <item>USA</item>
+    </string-array>
+    <string-array name="meeting_countries_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="meeting_cities_of_china">
+        <item>全部</item>
+        <item>上海</item>
+        <item>北京</item>
+        <item>广州</item>
+        <item>深圳</item>
+    </string-array>
+    <string-array name="meeting_cities_value_of_china">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="meeting_cities_of_japan">
+        <item>全部</item>
+        <item>東京</item>
+        <item>大阪</item>
+        <item>横浜</item>
+    </string-array>
+    <string-array name="meeting_cities_value_of_japan">
+        <item>0</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="meeting_cities_of_usa">
+        <item>全部</item>
+        <item>New York</item>
+        <item>Boston</item>
+        <item>Washington D.C.</item>
+        <item>Chicago</item>
+        <item>Los Angeles</item>
+        <item>Silicon Valley</item>
+    </string-array>
+    <string-array name="meeting_cities_value_of_usa">
+        <item>0</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="meeting_industries_of_china">
+        <item>全部</item>
+        <item>计算机/网络/通信</item>
+        <item>金融/投资/会计</item>
+        <item>媒体/营销/广告/公关</item>
+        <item>汽车/能源/冶金/机械/制造/化工/重工业</item>
+        <item>纺织/食品/家电/日化/轻工业</item>
+        <item>餐饮/旅游/休闲/娱乐/体育</item>
+        <item>医疗/保健/生物工程</item>
+        <item>商品贸易</item>
+        <item>交通/运输/物流</item>
+        <item>房地产/建筑/装潢</item>
+        <item>法律/咨询/服务</item>
+        <item>教育/科研/培训</item>
+        <item>政府/公共事业/非盈利机构/协会社团/公共服务</item>
+        <item>农林牧渔</item>
+        <item>其他行业</item>
+    </string-array>
+    <string-array name="meeting_industries_of_japan">
+        <item>全部</item>
+        <item>IT/インターネット/通信</item>
+        <item>金融/投資/会計</item>
+        <item>メディア/マーケティング/広告/広報</item>
+        <item>自動車/エネルギー/冶金/プラント/機械設備/化学工業/重工業</item>
+        <item>アパレル/食品/家電/家庭用品/軽工業</item>
+        <item>飲食/旅行/レジャー施設/エンタメ関連/スポーツ</item>
+        <item>医療/健康食品/健康器具/バイオ工学</item>
+        <item>総合商社/輸出入関連</item>
+        <item>交通/運送/物流</item>
+        <item>不動産/建設/住宅設備</item>
+        <item>法律/コンサルティング/サービス</item>
+        <item>教育/リサーチ/研修</item>
+        <item>官庁/公共事業/NGO/団体/公共サービス</item>
+        <item>農業/林業/畜産業/漁業</item>
+        <item>その他</item>
+    </string-array>
+    <string-array name="meeting_industries_of_usa">
+        <item>全部</item>
+        <item>Computing/Internet/Telecom</item>
+        <item>Finance/Investment/Accounting</item>
+        <item>Media/Communications/Marketing/Advertising/Public Relations</item>
+        <item>Automobile/Energy/Metallurgy/Equipment/Manufacturing/Chemical Industry/Heavy Industry</item>
+        <item>Textile/Food/Electronics/Daily Products/Light Industry</item>
+        <item>Restaurant/Travel/Leisure/Entertainment/Sports</item>
+        <item>Medical/Health/Bio-Engineering</item>
+        <item>Trade/Export/Import</item>
+        <item>Transportation/Supply Chain/Logistics</item>
+        <item>Real Estate/Architecture/Housing</item>
+        <item>Law/Consulting/Service</item>
+        <item>Education/Research/Training</item>
+        <item>Government/Public Affairs/NGOs/Soceities/Public Service</item>
+        <item>Agriculture/Forestry/Husbandry/Fishery</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="meeting_industries_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="meeting_my_favorite_filters">
+        <item>未开始/进行中的会议</item>
+        <item>已结束的会议</item>
+    </string-array>
+    <string-array name="meeting_my_favorite_filters_value">
+        <item>future</item>
+        <item>past</item>
+    </string-array>
+    <string-array name="week_days">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+    <string-array name="months">
+        <item>1月</item>
+        <item>2月</item>
+        <item>3月</item>
+        <item>4月</item>
+        <item>5月</item>
+        <item>6月</item>
+        <item>7月</item>
+        <item>8月</item>
+        <item>9月</item>
+        <item>10月</item>
+        <item>11月</item>
+        <item>12月</item>
+    </string-array>
+    <string-array name="meeting_states">
+        <item>未开始</item>
+        <item>会议中</item>
+        <item>已结束</item>
+    </string-array>
+    <array name="take_picture_choose">
+        <item>@string/text_take_photo_by_camera</item>
+        <item>@string/text_take_photo_by_gallery</item>
+    </array>
+    <string-array name="message_actions">
+        <item>复制</item>
+        <item>删除</item>
+        <item>取消</item>
+    </string-array>
+    <string-array name="system_sdr_list_daies">
+        <item>今天</item>
+        <item>昨天</item>
+        <item>更早</item>
+        <item>刚刚</item>
+    </string-array>
+    <string-array name="contacts_plaza_add_people_way">
+        <item>人脉通ID</item>
+        <item>手机号码或邮箱</item>
+        <item>通讯录</item>
+        <item>新浪微博</item>
+        <item>LinkedIn</item>
+        <item>取消</item>
+    </string-array>
+    <string-array name="text_message_faces">
+        <item>调皮</item>
+        <item>惊讶</item>
+        <item>呵呵</item>
+        <item>微笑</item>
+        <item>难过</item>
+        <item>无聊</item>
+        <item>眼镜</item>
+        <item>哈哈</item>
+        <item>示爱</item>
+        <item>流泪</item>
+        <item>陶醉</item>
+        <item>猴子</item>
+        <item>恶魔</item>
+        <item>吐舌头</item>
+        <item>伤心</item>
+        <item>感冒</item>
+        <item>呲牙</item>
+        <item>得意</item>
+        <item>惊愕</item>
+        <item>困</item>
+        <item>质疑</item>
+        <item>撇嘴</item>
+        <item>委屈</item>
+        <item>酷</item>
+        <item>大哭</item>
+        <item>可爱</item>
+        <item>愤怒</item>
+    </string-array>
+</resources>

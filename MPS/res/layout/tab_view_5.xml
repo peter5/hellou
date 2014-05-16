@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/scroll_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/my_profile" style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_myprofile" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:id="@id/more_text" android:text="@string/text_my_profile" style="@style/more_text" />
+            <ImageView android:id="@id/arrow_right" android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+            <LinearLayout android:orientation="vertical" android:id="@id/percentage_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/arrow_right" android:layout_toRightOf="@id/more_text" android:layout_centerVertical="true">
+                <RelativeLayout android:gravity="center" android:background="@drawable/profile_complete_percentage_background" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="22.0dip">
+                    <ImageView android:id="@id/image_percentage" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/profile_complete_percentage_red" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/ctd_nothing" />
+                    <TextView android:textSize="11.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/text_percentage" android:background="@color/transparent" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/text_profile_complete_percentage" />
+                </RelativeLayout>
+                <TextView android:textSize="11.0sp" android:textColor="@color/text_unsupply_color" android:id="@id/text_profile_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_loading" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout android:id="@id/sdr_ground" style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_sdr" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:id="@id/more_text" android:text="@string/text_publish_business_opportunities" style="@style/more_text" />
+            <ImageView android:id="@id/arrow_right" android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+            <LinearLayout android:orientation="vertical" android:id="@id/sdr_light_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/arrow_right" android:layout_toRightOf="@id/more_text" android:layout_centerVertical="true">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/text_sdr_supply" android:background="@drawable/shape_text_unsupply" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@string/text_supply" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/text_sdr_demand" android:background="@drawable/shape_text_undemand" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@string/text_demand" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/text_sdr_recruit" android:background="@drawable/shape_text_unrecruit" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@string/text_recruit" />
+                </LinearLayout>
+                <TextView android:textSize="11.0sp" android:textColor="@color/text_unsupply_color" android:id="@id/text_sdr_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_loading" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout android:id="@id/sina_weibo" style="@style/more_item">
+            <ImageView android:src="@drawable/gd_list_weibo01" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:id="@id/more_text" android:text="@string/text_sinaweibo" style="@style/more_text" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/text_unsupply_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_sinaweibo_bind_tips" android:layout_toRightOf="@id/more_text" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/arrow_right" android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+        </RelativeLayout>
+        <ImageView android:id="@id/cut_line_sinaweibo" android:contentDescription="@string/ctd_cut_line" style="@style/list_cut_line" />
+        <RelativeLayout android:id="@id/bind_linkedin" style="@style/more_item">
+            <ImageView android:src="@drawable/gd_list_linkedin01" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:id="@id/more_text" android:text="@string/text_bind_linkedin" style="@style/more_text" />
+            <ImageView android:id="@id/arrow_right" android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/text_unsupply_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_bind_linkedin_tips" android:layout_toLeftOf="@id/arrow_right" android:layout_toRightOf="@id/more_text" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/cut_line_linkedin" android:contentDescription="@string/ctd_cut_line" style="@style/list_cut_line" />
+        <RelativeLayout android:id="@id/private_setting" style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_private" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:text="@string/text_private_setting" style="@style/more_text" />
+            <ImageView android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout android:id="@id/feedback" style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_feedback" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:text="@string/text_feedback" style="@style/more_text" />
+            <ImageView android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout android:id="@id/change_password" style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_change_password" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:text="@string/text_modify_password" style="@style/more_text" />
+            <ImageView android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout android:id="@id/logout" style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_logout" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:text="@string/text_logout" style="@style/more_text" />
+            <ImageView android:contentDescription="@string/ctd_arrow_right" style="@style/more_arrow_right" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+        <RelativeLayout style="@style/more_item">
+            <ImageView android:src="@drawable/more_icon_info" android:contentDescription="@string/ctd_icon" style="@style/more_icon" />
+            <TextView android:id="@id/text_version" android:text="@string/text_version_name" style="@style/more_text" />
+        </RelativeLayout>
+        <include layout="@layout/cut_line" />
+    </LinearLayout>
+</ScrollView>

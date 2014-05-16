@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:orientation="vertical" android:background="@color/lightgrey" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="*"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow>
+        <ImageView android:id="@id/face_a1" android:src="@drawable/a1" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a2" android:src="@drawable/a2" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a3" android:src="@drawable/a3" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a4" android:src="@drawable/a4" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a5" android:src="@drawable/a5" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a6" android:src="@drawable/a6" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a7" android:src="@drawable/a7" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+    </TableRow>
+    <TableRow>
+        <ImageView android:id="@id/face_a8" android:src="@drawable/a8" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a9" android:src="@drawable/a9" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a10" android:src="@drawable/a10" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a11" android:src="@drawable/a11" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a12" android:src="@drawable/a12" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a13" android:src="@drawable/a13" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a14" android:src="@drawable/a14" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+    </TableRow>
+    <TableRow>
+        <ImageView android:id="@id/face_a15" android:src="@drawable/a15" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a16" android:src="@drawable/a16" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a17" android:src="@drawable/a17" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a18" android:src="@drawable/a18" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a19" android:src="@drawable/a19" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_a20" android:src="@drawable/a20" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+        <ImageView android:id="@id/face_del" android:src="@drawable/sx_del_btn" android:contentDescription="@string/ctd_icon" style="@style/MessageFaceStyle" />
+    </TableRow>
+</TableLayout>

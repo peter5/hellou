@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_setting"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:background="@drawable/title_top3" 
+    android:layout_alignParentTop="true">
+
+
+
+    <TextView
+        android:id="@id/label_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/nav_right_layout"
+        android:layout_toRightOf="@id/nav_left_layout"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0"
+        android:singleLine="true"
+        android:text="录音"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+
+	</RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/nav_setting" style="@style/scroll_view">
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+  			<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+  			    <TextView android:id="@+id/audioTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:textSize="20dp" android:text="录音时间："/>
+  			</LinearLayout>
+            <LinearLayout android:visibility="gone" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/start_record" android:background="@drawable/my_btn1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="5.0dip" android:text="开始录音" android:layout_weight="1.0" />
+                <Button android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/stop_record" android:background="@drawable/my_btn1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="5.0dip" android:text="结束录音" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

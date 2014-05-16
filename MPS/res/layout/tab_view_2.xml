@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/subnav_layout" android:background="@drawable/nav_sub_title_background" android:layout_width="fill_parent" android:layout_height="@dimen/app_sub_title_height">
+        <Button android:id="@id/button_contacts_plaza" android:text="@string/text_contacts_plaza" style="@style/nav_tab_button" />
+        <ImageView android:contentDescription="@string/ctd_cut_line" style="@style/subnav_cut_line" />
+        <Button android:id="@id/button_bussiness_contacts" android:text="@string/text_my_contacts" style="@style/nav_tab_button" />
+        <ImageView android:contentDescription="@string/ctd_cut_line" style="@style/subnav_cut_line" />
+        <Button android:id="@id/button_company_group" android:text="@string/text_company_group" style="@style/nav_tab_button" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/subnav_layout" />
+</RelativeLayout>

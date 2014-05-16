@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bgcolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nav_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titile_bg2" >
+
+        <LinearLayout
+            android:id="@id/nav_right_layout"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+
+            <!--<ImageButton
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="退出"
+                android:scaleType="fitXY"
+                android:src="@drawable/my_back_btn2" />-->
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_vertical"
+               android:src="@drawable/my_back_btn2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@id/label_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_toLeftOf="@id/nav_right_layout"
+            android:layout_toRightOf="@id/nav_left_layout"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingRight="53dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="3.0"
+            android:singleLine="true"
+            android:text="医学信息在线"
+            android:textColor="@color/black"
+            android:textSize="18.0sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mps_icon" />
+
+        <LinearLayout
+            android:id="@+id/recordLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="1000dp" >
+
+            <SurfaceView
+                android:id="@+id/camera"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:visibility="invisible" />
+
+            <SurfaceView
+                android:id="@+id/surfaceView1"
+                android:layout_width="1dp"
+                android:layout_height="1dp" 
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_reUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label_title"
+            android:layout_alignBottom="@id/label_title"
+            android:layout_alignRight="@id/label_title"
+            android:layout_marginRight="24dp"/>
+        <!-- 
+            android:text="@string/reUpfile" 
+            android:textColor="#ffeeeeee" -->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_setting"
+        android:layout_marginRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/mainRight"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/projectListSpinner"
+                style="@style/spinner_style"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:animationCache="true"
+                android:drawSelectorOnTop="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/titile_bg2"
+                android:gravity="center"
+                android:text="视频资料"
+                android:textSize="16dp" 
+                android:textStyle="bold"/>
+
+            <ListView
+                android:id="@+id/addVideoLayout"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/titile_bg2"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="文档资料"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/addDocumentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AddLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/mainRight"
+            android:gravity="center"
+            android:background="@color/appColor" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

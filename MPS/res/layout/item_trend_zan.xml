@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/list_item_background" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/user_icon" layout="@layout/user_icon_59" />
+        <RelativeLayout android:id="@id/content_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/user_icon" android:layout_centerVertical="true">
+            <TextView android:textSize="13.0sp" android:textColor="@color/trend_name_color" android:id="@id/text_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_loading" android:layout_alignParentTop="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/black" android:id="@id/text_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_loading" android:layout_below="@id/text_name" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/black" android:id="@id/text" android:background="@drawable/z_fh_bk" android:paddingLeft="4.0dip" android:paddingTop="18.0px" android:paddingRight="4.0dip" android:paddingBottom="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_loading" android:layout_below="@id/text_info" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:id="@id/text_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_loading" android:layout_below="@id/text" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include layout="@layout/cut_line" />
+</LinearLayout>
