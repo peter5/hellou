@@ -256,37 +256,70 @@ public class SubMitLocation extends Activity {
 
 		iv_pic = (ImageView) findViewById(R.id.iv_picture);
 
-		// content_QT.addTextChangedListener(new TextWatcher() {
-		// @Override
-		// public void onTextChanged(CharSequence s, int start, int before, int
-		// count) {
-		// }
-		// @Override
-		// public void beforeTextChanged(CharSequence s, int start, int count,
-		// int after) {
-		// }
-		// @Override
-		// public void afterTextChanged(Editable s) {
-		// // TODO Auto-generated method stub
-		// int lines = content_QT.getLineCount();
-		// // 限制最大输入行数
-		// if (lines > 3) {
-		// String str = s.toString();
-		// int cursorStart = content_QT.getSelectionStart();
-		// int cursorEnd = content_QT.getSelectionEnd();
-		// if (cursorStart == cursorEnd && cursorStart < str.length() &&
-		// cursorStart >= 1) {
-		// str = str.substring(0, cursorStart-1) + str.substring(cursorStart);
-		// } else {
-		// str = str.substring(0, s.length()-1);
-		// }
-		// // setText会触发afterTextChanged的递归
-		// content_QT.setText(str);
-		// // setSelection用的索引不能使用str.length()否则会越界
-		// content_QT.setSelection(content_QT.getText().length());
-		// }
-		// }
-		// });
+		content_et_SW.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+				int lines = content_et_SW.getLineCount();
+				// 限制最大输入行数
+				if (lines > 5 ) {
+					String str = s.toString();
+					int cursorStart = content_et_SW.getSelectionStart();
+					int cursorEnd = content_et_SW.getSelectionEnd();
+					if (cursorStart == cursorEnd && cursorStart < str.length()
+							&& cursorStart >= 1) {
+						str = str.substring(0, cursorStart - 1)
+								+ str.substring(cursorStart);
+					} else {
+						str = str.substring(0, s.length() - 1);
+					}
+					// setText会触发afterTextChanged的递归
+					content_et_SW.setText(str);
+					// setSelection用的索引不能使用str.length()否则会越界
+					content_et_SW
+							.setSelection(content_et_SW.getText().length());
+				}
+			}
+		});
+		content_et_XW.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+				int lines = content_et_XW.getLineCount();
+				// 限制最大输入行数
+				if (lines > 5 ) {
+					String str = s.toString();
+					int cursorStart = content_et_XW.getSelectionStart();
+					int cursorEnd = content_et_XW.getSelectionEnd();
+					if (cursorStart == cursorEnd && cursorStart < str.length()
+							&& cursorStart >= 1) {
+						str = str.substring(0, cursorStart - 1)
+								+ str.substring(cursorStart);
+					} else {
+						str = str.substring(0, s.length() - 1);
+					}
+					// setText会触发afterTextChanged的递归
+					content_et_XW.setText(str);
+					// setSelection用的索引不能使用str.length()否则会越界
+					content_et_XW
+					.setSelection(content_et_XW.getText().length());
+				}
+			}
+		});
 
 	}
 

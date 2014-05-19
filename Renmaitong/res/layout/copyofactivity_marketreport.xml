@@ -247,8 +247,9 @@
 				        android:background="@drawable/shape_edit"
                         android:textCursorDrawable="@null"
 				        android:text=""
-				        android:singleLine="false"
-				        android:lines="3"
+				        android:singleLine="false" 
+				        android:lines="5"
+				        android:maxLines="5"
                         android:textColor="#232323"
 				        android:gravity="start"
 				        android:ems="10" 
@@ -285,13 +286,14 @@
                         android:textCursorDrawable="@null"
 				        android:text=""
 				        android:singleLine="false"
-				        android:lines="3"
+				        android:lines="5"
+				        android:maxLines="5"
                         android:textColor="#232323"
 				        android:gravity="start"
 				        android:ems="10" 
 				        android:maxEms="10"
-				        android:textSize="14sp"
-				        android:maxLength="100" >
+				        android:textSize="14sp" 
+				        android:maxLength="100">
                     </EditText>
                 </LinearLayout>
     
