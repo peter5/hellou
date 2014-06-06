@@ -99,7 +99,7 @@
                     android:background="@drawable/shape_bg2"
                     android:gravity="left"
                     android:padding="3dp"
-                    android:text="前一日数据"
+                    android:text="前一日数据(当月累计数据)"
                     android:textColor="@color/gray"
                     android:textSize="15sp" />
 
@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="上午："
+                        android:text="AM："
                         android:textColor="@color/gray" />
                     
                      <EditText
@@ -247,8 +247,9 @@
 				        android:background="@drawable/shape_edit"
                         android:textCursorDrawable="@null"
 				        android:text=""
-				        android:singleLine="false"
-				        android:lines="3"
+				        android:singleLine="false" 
+				        android:lines="5"
+				        android:maxLines="5"
                         android:textColor="#232323"
 				        android:gravity="start"
 				        android:ems="10" 
@@ -269,7 +270,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="下午："
+                        android:text="PM："
                         android:textColor="@color/gray" />
 
 
@@ -285,13 +286,14 @@
                         android:textCursorDrawable="@null"
 				        android:text=""
 				        android:singleLine="false"
-				        android:lines="3"
+				        android:lines="5"
+				        android:maxLines="5"
                         android:textColor="#232323"
 				        android:gravity="start"
 				        android:ems="10" 
 				        android:maxEms="10"
-				        android:textSize="14sp"
-				        android:maxLength="100" >
+				        android:textSize="14sp" 
+				        android:maxLength="100">
                     </EditText>
                 </LinearLayout>
     

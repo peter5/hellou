@@ -21,7 +21,6 @@ public class Test2 extends Activity{
 
     private static final String ImageView = null;
 
-	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
