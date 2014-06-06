@@ -5835,21 +5835,22 @@ com.zlq.renmaitong.InformationReport -> com.zlq.renmaitong.InformationReport:
     android.widget.Button audioBtn -> K
     android.widget.Button btnLocation -> L
     int namePosition -> M
+    android.widget.TextView tv_count -> N
     int currentPhotoIndex -> g
     int currentVideoIndex -> h
     int currentAudioIndex -> i
-    boolean uploadPhotoFail -> N
-    boolean uploadVideoFail -> O
-    boolean uploadAudioFail -> P
+    boolean uploadPhotoFail -> O
+    boolean uploadVideoFail -> P
+    boolean uploadAudioFail -> Q
     android.app.ProgressDialog progressDialog -> j
-    java.lang.String message -> Q
+    java.lang.String message -> R
     android.widget.ArrayAdapter adapter -> k
     android.widget.ArrayAdapter nameAdapter -> l
-    android.os.Handler handler -> R
+    android.os.Handler handler -> S
     android.widget.TextView reUp_tv -> m
     android.widget.TextView yiUpTv -> n
     android.widget.Button btn_reUp -> o
-    int total -> S
+    int total -> T
     java.io.File dir -> p
     int reUPnum -> q
     int threadStart -> r
@@ -5865,11 +5866,13 @@ com.zlq.renmaitong.InformationReport -> com.zlq.renmaitong.InformationReport:
     void getVideo_photoFile(java.util.LinkedList,java.io.File) -> a
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void leave() -> b
+    void doBackup(java.lang.String) -> f
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     java.lang.String getProjectNum(java.lang.String) -> a
-    void uploadPhoto(java.lang.String) -> f
-    void uploadVideo(java.lang.String) -> g
-    void uploadAudio(java.lang.String) -> h
+    void uploadPhoto(java.lang.String) -> g
+    void copyFile(java.io.File,java.io.File) -> a
+    void uploadVideo(java.lang.String) -> h
+    void uploadAudio(java.lang.String) -> i
     void onDestroy() -> onDestroy
     void onPause() -> onPause
     void onResume() -> onResume
@@ -6049,6 +6052,7 @@ com.zlq.renmaitong.MainActivity -> com.zlq.renmaitong.MainActivity:
     java.lang.String localVersion -> B
     java.lang.String serverVersion -> C
     int sdk_int -> D
+    java.lang.String count -> E
     boolean isDownloading(int) -> a
     java.lang.String getNotiPercent(long,long) -> a
     java.lang.CharSequence getAppSize(long) -> a
@@ -6068,33 +6072,36 @@ com.zlq.renmaitong.MainActivity -> com.zlq.renmaitong.MainActivity:
     android.app.ProgressDialog access$5(com.zlq.renmaitong.MainActivity) -> e
     java.lang.String access$6(com.zlq.renmaitong.MainActivity) -> f
     int access$7(com.zlq.renmaitong.MainActivity) -> g
-    java.lang.String access$8(com.zlq.renmaitong.MainActivity) -> h
-    java.lang.String access$9(com.zlq.renmaitong.MainActivity) -> i
-    int access$10(com.zlq.renmaitong.MainActivity) -> j
-    void access$11(com.zlq.renmaitong.MainActivity,java.lang.String) -> a
-    java.lang.String access$12(com.zlq.renmaitong.MainActivity) -> k
+    void access$8(com.zlq.renmaitong.MainActivity,java.lang.String) -> a
+    java.lang.String access$9(com.zlq.renmaitong.MainActivity) -> h
+    java.lang.String access$10(com.zlq.renmaitong.MainActivity) -> i
+    java.lang.String access$11(com.zlq.renmaitong.MainActivity) -> j
+    int access$12(com.zlq.renmaitong.MainActivity) -> k
     void access$13(com.zlq.renmaitong.MainActivity,java.lang.String) -> b
-    android.widget.ProgressBar access$14(com.zlq.renmaitong.MainActivity) -> l
-    android.widget.TextView access$15(com.zlq.renmaitong.MainActivity) -> m
-    android.widget.TextView access$16(com.zlq.renmaitong.MainActivity) -> n
-    long access$17(com.zlq.renmaitong.MainActivity) -> o
-    void access$18(com.zlq.renmaitong.MainActivity) -> p
-    com.zlq.util.DownloadManagerPro access$19(com.zlq.renmaitong.MainActivity) -> q
-    com.zlq.renmaitong.MainActivity$MyHandler access$20(com.zlq.renmaitong.MainActivity) -> r
-    void access$21$7a33711(android.content.DialogInterface,boolean) -> a
-    android.app.DownloadManager access$22(com.zlq.renmaitong.MainActivity) -> s
-    com.zlq.renmaitong.MainActivity$DownloadChangeObserver access$23(com.zlq.renmaitong.MainActivity) -> t
-    com.zlq.renmaitong.MainActivity$CompleteReceiver access$24(com.zlq.renmaitong.MainActivity) -> u
-    void access$25(com.zlq.renmaitong.MainActivity,java.lang.String) -> c
-    void access$26(com.zlq.renmaitong.MainActivity,android.app.ProgressDialog) -> a
-    android.widget.PopupWindow access$27(com.zlq.renmaitong.MainActivity) -> v
-    com.zlq.renmaitong.MainActivity$myAdapter access$28(com.zlq.renmaitong.MainActivity) -> w
-    void access$29(com.zlq.renmaitong.MainActivity,com.zlq.renmaitong.MainActivity$myAdapter) -> a
-    void access$30(com.zlq.renmaitong.MainActivity,android.widget.ListView) -> a
-    android.widget.ListView access$31(com.zlq.renmaitong.MainActivity) -> x
-    void access$32(com.zlq.renmaitong.MainActivity,android.widget.PopupWindow) -> a
-    void access$33(com.zlq.renmaitong.MainActivity,boolean) -> a
-    boolean access$34(com.zlq.renmaitong.MainActivity) -> y
+    java.lang.String access$14(com.zlq.renmaitong.MainActivity) -> l
+    void access$15(com.zlq.renmaitong.MainActivity,java.lang.String) -> c
+    android.widget.ProgressBar access$16(com.zlq.renmaitong.MainActivity) -> m
+    android.widget.TextView access$17(com.zlq.renmaitong.MainActivity) -> n
+    android.widget.TextView access$18(com.zlq.renmaitong.MainActivity) -> o
+    long access$19(com.zlq.renmaitong.MainActivity) -> p
+    void access$20(com.zlq.renmaitong.MainActivity) -> q
+    com.zlq.util.DownloadManagerPro access$21(com.zlq.renmaitong.MainActivity) -> r
+    com.zlq.renmaitong.MainActivity$MyHandler access$22(com.zlq.renmaitong.MainActivity) -> s
+    void access$23$7a33711(android.content.DialogInterface,boolean) -> a
+    android.app.DownloadManager access$24(com.zlq.renmaitong.MainActivity) -> t
+    com.zlq.renmaitong.MainActivity$DownloadChangeObserver access$25(com.zlq.renmaitong.MainActivity) -> u
+    com.zlq.renmaitong.MainActivity$CompleteReceiver access$26(com.zlq.renmaitong.MainActivity) -> v
+    void access$27$3a7a2c48(java.io.File) -> a
+    void access$28(com.zlq.renmaitong.MainActivity,java.lang.String) -> d
+    void access$29(com.zlq.renmaitong.MainActivity,android.app.ProgressDialog) -> a
+    android.widget.PopupWindow access$30(com.zlq.renmaitong.MainActivity) -> w
+    com.zlq.renmaitong.MainActivity$myAdapter access$31(com.zlq.renmaitong.MainActivity) -> x
+    void access$32(com.zlq.renmaitong.MainActivity,com.zlq.renmaitong.MainActivity$myAdapter) -> a
+    void access$33(com.zlq.renmaitong.MainActivity,android.widget.ListView) -> a
+    android.widget.ListView access$34(com.zlq.renmaitong.MainActivity) -> y
+    void access$35(com.zlq.renmaitong.MainActivity,android.widget.PopupWindow) -> a
+    void access$36(com.zlq.renmaitong.MainActivity,boolean) -> a
+    boolean access$37(com.zlq.renmaitong.MainActivity) -> z
 com.zlq.renmaitong.MainActivity$1 -> com.zlq.renmaitong.bz:
     com.zlq.renmaitong.MainActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
@@ -6113,61 +6120,64 @@ com.zlq.renmaitong.MainActivity$3 -> com.zlq.renmaitong.cc:
     void onClick(android.content.DialogInterface,int) -> onClick
 com.zlq.renmaitong.MainActivity$4 -> com.zlq.renmaitong.cd:
     com.zlq.renmaitong.MainActivity this$0 -> a
-    java.lang.String val$versionUrl -> b
     void run() -> run
 com.zlq.renmaitong.MainActivity$5 -> com.zlq.renmaitong.ce:
     com.zlq.renmaitong.MainActivity this$0 -> a
+    java.lang.String val$versionUrl -> b
+    void run() -> run
+com.zlq.renmaitong.MainActivity$6 -> com.zlq.renmaitong.cf:
+    com.zlq.renmaitong.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-    com.zlq.renmaitong.MainActivity access$0(com.zlq.renmaitong.MainActivity$5) -> a
-com.zlq.renmaitong.MainActivity$5$1 -> com.zlq.renmaitong.cf:
-    com.zlq.renmaitong.MainActivity$5 this$1 -> a
+    com.zlq.renmaitong.MainActivity access$0(com.zlq.renmaitong.MainActivity$6) -> a
+com.zlq.renmaitong.MainActivity$6$1 -> com.zlq.renmaitong.cg:
+    com.zlq.renmaitong.MainActivity$6 this$1 -> a
     android.telephony.TelephonyManager val$mTelephonyMgr -> b
     java.lang.String val$userName -> c
     java.lang.String val$password -> d
     void run() -> run
-com.zlq.renmaitong.MainActivity$6 -> com.zlq.renmaitong.cg:
+com.zlq.renmaitong.MainActivity$7 -> com.zlq.renmaitong.ch:
     com.zlq.renmaitong.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-    com.zlq.renmaitong.MainActivity access$0(com.zlq.renmaitong.MainActivity$6) -> a
-com.zlq.renmaitong.MainActivity$6$1 -> com.zlq.renmaitong.ch:
-    com.zlq.renmaitong.MainActivity$6 this$1 -> a
+    com.zlq.renmaitong.MainActivity access$0(com.zlq.renmaitong.MainActivity$7) -> a
+com.zlq.renmaitong.MainActivity$7$1 -> com.zlq.renmaitong.ci:
+    com.zlq.renmaitong.MainActivity$7 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zlq.renmaitong.MainActivity$6$2 -> com.zlq.renmaitong.ci:
-    com.zlq.renmaitong.MainActivity$6 this$1 -> a
+com.zlq.renmaitong.MainActivity$7$2 -> com.zlq.renmaitong.cj:
+    com.zlq.renmaitong.MainActivity$7 this$1 -> a
     android.content.SharedPreferences val$settings -> b
     android.widget.EditText val$serverIP -> c
     android.widget.EditText val$serverPort -> d
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zlq.renmaitong.MainActivity$7 -> com.zlq.renmaitong.cj:
-    com.zlq.renmaitong.MainActivity this$0 -> a
-    void onClick(android.view.View) -> onClick
 com.zlq.renmaitong.MainActivity$8 -> com.zlq.renmaitong.ck:
     com.zlq.renmaitong.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-    com.zlq.renmaitong.MainActivity access$0(com.zlq.renmaitong.MainActivity$8) -> a
-com.zlq.renmaitong.MainActivity$8$1 -> com.zlq.renmaitong.cl:
-    com.zlq.renmaitong.MainActivity$8 this$1 -> a
+com.zlq.renmaitong.MainActivity$9 -> com.zlq.renmaitong.cl:
+    com.zlq.renmaitong.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+    com.zlq.renmaitong.MainActivity access$0(com.zlq.renmaitong.MainActivity$9) -> a
+com.zlq.renmaitong.MainActivity$9$1 -> com.zlq.renmaitong.cm:
+    com.zlq.renmaitong.MainActivity$9 this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zlq.renmaitong.MainActivity$CompleteReceiver -> com.zlq.renmaitong.cm:
+com.zlq.renmaitong.MainActivity$CompleteReceiver -> com.zlq.renmaitong.cn:
     com.zlq.renmaitong.MainActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.zlq.renmaitong.MainActivity$DownloadChangeObserver -> com.zlq.renmaitong.cn:
+com.zlq.renmaitong.MainActivity$DownloadChangeObserver -> com.zlq.renmaitong.co:
     com.zlq.renmaitong.MainActivity this$0 -> a
     void onChange(boolean) -> onChange
-com.zlq.renmaitong.MainActivity$MyHandler -> com.zlq.renmaitong.co:
+com.zlq.renmaitong.MainActivity$MyHandler -> com.zlq.renmaitong.cp:
     com.zlq.renmaitong.MainActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zlq.renmaitong.MainActivity$myAdapter -> com.zlq.renmaitong.cp:
+com.zlq.renmaitong.MainActivity$myAdapter -> com.zlq.renmaitong.cq:
     android.view.LayoutInflater mInflater -> a
     com.zlq.renmaitong.MainActivity this$0 -> b
     int getCount() -> getCount
     java.lang.Object getItem(int) -> getItem
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.zlq.renmaitong.MainActivity$myAdapter$Holder -> com.zlq.renmaitong.cq:
+com.zlq.renmaitong.MainActivity$myAdapter$Holder -> com.zlq.renmaitong.cr:
     android.widget.TextView view -> a
     com.zlq.renmaitong.MainActivity$myAdapter this$1 -> b
-com.zlq.renmaitong.MovieRecorder -> com.zlq.renmaitong.cr:
+com.zlq.renmaitong.MovieRecorder -> com.zlq.renmaitong.cs:
     android.media.MediaRecorder mediarecorder -> b
     boolean isRecording -> a
     java.lang.String lastFileName -> c
@@ -6190,22 +6200,22 @@ com.zlq.renmaitong.RecorderActivity -> com.zlq.renmaitong.RecorderActivity:
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void onDestroy() -> onDestroy
     void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-com.zlq.renmaitong.RecorderActivity$1 -> com.zlq.renmaitong.cs:
+com.zlq.renmaitong.RecorderActivity$1 -> com.zlq.renmaitong.ct:
     com.zlq.renmaitong.RecorderActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zlq.renmaitong.RecorderActivity access$0(com.zlq.renmaitong.RecorderActivity$1) -> a
-com.zlq.renmaitong.RecorderActivity$1$1 -> com.zlq.renmaitong.ct:
+com.zlq.renmaitong.RecorderActivity$1$1 -> com.zlq.renmaitong.cu:
     com.zlq.renmaitong.RecorderActivity$1 this$1 -> a
     void run() -> run
-com.zlq.renmaitong.RecorderActivity$2 -> com.zlq.renmaitong.cu:
+com.zlq.renmaitong.RecorderActivity$2 -> com.zlq.renmaitong.cv:
     com.zlq.renmaitong.RecorderActivity this$0 -> a
     void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
     void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
     void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
-com.zlq.renmaitong.RecorderActivity$3 -> com.zlq.renmaitong.cv:
+com.zlq.renmaitong.RecorderActivity$3 -> com.zlq.renmaitong.cw:
     com.zlq.renmaitong.RecorderActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.RecorderActivity$4 -> com.zlq.renmaitong.cw:
+com.zlq.renmaitong.RecorderActivity$4 -> com.zlq.renmaitong.cx:
     com.zlq.renmaitong.RecorderActivity this$0 -> a
     void run() -> run
 com.zlq.renmaitong.ResetPassword -> com.zlq.renmaitong.ResetPassword:
@@ -6228,30 +6238,30 @@ com.zlq.renmaitong.ResetPassword -> com.zlq.renmaitong.ResetPassword:
     android.widget.EditText access$4(com.zlq.renmaitong.ResetPassword) -> e
     void access$5(com.zlq.renmaitong.ResetPassword,android.app.ProgressDialog) -> a
     void access$6(com.zlq.renmaitong.ResetPassword) -> f
-com.zlq.renmaitong.ResetPassword$1 -> com.zlq.renmaitong.cx:
+com.zlq.renmaitong.ResetPassword$1 -> com.zlq.renmaitong.cy:
     com.zlq.renmaitong.ResetPassword this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zlq.renmaitong.ResetPassword$ResetPasswordListener -> com.zlq.renmaitong.cy:
+com.zlq.renmaitong.ResetPassword$ResetPasswordListener -> com.zlq.renmaitong.cz:
     com.zlq.renmaitong.ResetPassword this$0 -> a
     void onClick(android.view.View) -> onClick
     com.zlq.renmaitong.ResetPassword access$0(com.zlq.renmaitong.ResetPassword$ResetPasswordListener) -> a
-com.zlq.renmaitong.ResetPassword$ResetPasswordListener$1 -> com.zlq.renmaitong.cz:
+com.zlq.renmaitong.ResetPassword$ResetPasswordListener$1 -> com.zlq.renmaitong.da:
     com.zlq.renmaitong.ResetPassword$ResetPasswordListener this$1 -> a
     void run() -> run
 com.zlq.renmaitong.RestPasswordSuccess -> com.zlq.renmaitong.RestPasswordSuccess:
     android.widget.ImageButton resetSuccessback -> a
     android.widget.ImageView resetSuccessbackMV -> b
     void onCreate(android.os.Bundle) -> onCreate
-com.zlq.renmaitong.RestPasswordSuccess$1 -> com.zlq.renmaitong.da:
+com.zlq.renmaitong.RestPasswordSuccess$1 -> com.zlq.renmaitong.db:
     com.zlq.renmaitong.RestPasswordSuccess this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.RestPasswordSuccess$2 -> com.zlq.renmaitong.db:
+com.zlq.renmaitong.RestPasswordSuccess$2 -> com.zlq.renmaitong.dc:
     com.zlq.renmaitong.RestPasswordSuccess this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zlq.renmaitong.Splash -> com.zlq.renmaitong.Splash:
     int SPLASH_DISPLAY_LENGHT -> a
     void onCreate(android.os.Bundle) -> onCreate
-com.zlq.renmaitong.Splash$1 -> com.zlq.renmaitong.dc:
+com.zlq.renmaitong.Splash$1 -> com.zlq.renmaitong.dd:
     com.zlq.renmaitong.Splash this$0 -> a
     void run() -> run
 com.zlq.renmaitong.StafInformation -> com.zlq.renmaitong.StafInformation:
@@ -6299,24 +6309,24 @@ com.zlq.renmaitong.StafInformation -> com.zlq.renmaitong.StafInformation:
     boolean access$17(com.zlq.renmaitong.StafInformation) -> p
     void access$18(com.zlq.renmaitong.StafInformation) -> q
     java.lang.String access$19(com.zlq.renmaitong.StafInformation) -> r
-com.zlq.renmaitong.StafInformation$1 -> com.zlq.renmaitong.dd:
+com.zlq.renmaitong.StafInformation$1 -> com.zlq.renmaitong.de:
     com.zlq.renmaitong.StafInformation this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zlq.renmaitong.StafInformation$2 -> com.zlq.renmaitong.de:
+com.zlq.renmaitong.StafInformation$2 -> com.zlq.renmaitong.df:
     com.zlq.renmaitong.StafInformation this$0 -> a
     void run() -> run
-com.zlq.renmaitong.StafInformation$3 -> com.zlq.renmaitong.df:
+com.zlq.renmaitong.StafInformation$3 -> com.zlq.renmaitong.dg:
     com.zlq.renmaitong.StafInformation this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.StafInformation$4 -> com.zlq.renmaitong.dg:
+com.zlq.renmaitong.StafInformation$4 -> com.zlq.renmaitong.dh:
     com.zlq.renmaitong.StafInformation this$0 -> a
     void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
     void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
-com.zlq.renmaitong.StafInformation$5 -> com.zlq.renmaitong.dh:
+com.zlq.renmaitong.StafInformation$5 -> com.zlq.renmaitong.di:
     com.zlq.renmaitong.StafInformation this$0 -> a
     void onClick(android.view.View) -> onClick
     com.zlq.renmaitong.StafInformation access$0(com.zlq.renmaitong.StafInformation$5) -> a
-com.zlq.renmaitong.StafInformation$5$1 -> com.zlq.renmaitong.di:
+com.zlq.renmaitong.StafInformation$5$1 -> com.zlq.renmaitong.dj:
     com.zlq.renmaitong.StafInformation$5 this$1 -> a
     void run() -> run
 com.zlq.renmaitong.SubMitLocation -> com.zlq.renmaitong.SubMitLocation:
@@ -6326,19 +6336,22 @@ com.zlq.renmaitong.SubMitLocation -> com.zlq.renmaitong.SubMitLocation:
     android.widget.EditText content_CX -> i
     android.widget.EditText content_KF -> j
     android.widget.EditText content_KH -> k
-    android.widget.EditText content_QT -> l
-    java.lang.String message -> m
-    java.lang.String photopath -> n
-    android.widget.ImageView iv_pic -> o
+    android.widget.EditText content_et_SW -> l
+    android.widget.EditText content_et_XW -> m
+    java.lang.String message -> n
+    java.lang.String photopath -> o
+    android.widget.ImageView iv_pic -> p
     java.io.File test -> a
-    android.app.ProgressDialog progressDialog -> p
+    android.app.ProgressDialog progressDialog -> q
     com.baidu.mapapi.BMapManager mBMapMan -> b
     com.baidu.mapapi.LocationListener mLocationListener -> c
     android.location.Location myLocation -> d
     android.os.Handler handler -> e
+    android.text.TextWatcher textWatcher -> r
     void onCreate(android.os.Bundle) -> onCreate
+    void copyFile(java.io.File,java.io.File) -> a
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
-    void upPicture(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void upPicture(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
     void onDestroy() -> onDestroy
     void onPause() -> onPause
     void onResume() -> onResume
@@ -6351,46 +6364,61 @@ com.zlq.renmaitong.SubMitLocation -> com.zlq.renmaitong.SubMitLocation:
     android.widget.EditText access$2(com.zlq.renmaitong.SubMitLocation) -> c
     android.widget.EditText access$3(com.zlq.renmaitong.SubMitLocation) -> d
     android.widget.EditText access$4(com.zlq.renmaitong.SubMitLocation) -> e
-    void access$5(com.zlq.renmaitong.SubMitLocation,android.app.ProgressDialog) -> a
-    java.lang.String access$6(com.zlq.renmaitong.SubMitLocation) -> f
-    void access$7(com.zlq.renmaitong.SubMitLocation,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
-    void access$8(com.zlq.renmaitong.SubMitLocation,java.lang.String) -> a
-    void access$9(com.zlq.renmaitong.SubMitLocation,java.lang.String) -> b
-    void access$10(com.zlq.renmaitong.SubMitLocation,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> b
-com.zlq.renmaitong.SubMitLocation$1 -> com.zlq.renmaitong.dj:
+    android.widget.EditText access$5(com.zlq.renmaitong.SubMitLocation) -> f
+    void access$6(com.zlq.renmaitong.SubMitLocation,android.app.ProgressDialog) -> a
+    java.lang.String access$7(com.zlq.renmaitong.SubMitLocation) -> g
+    void access$8(com.zlq.renmaitong.SubMitLocation,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void access$9(com.zlq.renmaitong.SubMitLocation,java.lang.String) -> a
+    void access$10(com.zlq.renmaitong.SubMitLocation,java.lang.String) -> b
+    void access$11(com.zlq.renmaitong.SubMitLocation,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> b
+com.zlq.renmaitong.SubMitLocation$1 -> com.zlq.renmaitong.dk:
     com.zlq.renmaitong.SubMitLocation this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zlq.renmaitong.SubMitLocation$2 -> com.zlq.renmaitong.dk:
-    com.zlq.renmaitong.SubMitLocation this$0 -> a
-    void onLocationChanged(android.location.Location) -> onLocationChanged
-com.zlq.renmaitong.SubMitLocation$3 -> com.zlq.renmaitong.dl:
-    java.lang.String _content_qt -> a
-    com.zlq.renmaitong.SubMitLocation this$0 -> b
-    void onClick(android.view.View) -> onClick
-    com.zlq.renmaitong.SubMitLocation access$0(com.zlq.renmaitong.SubMitLocation$3) -> a
-com.zlq.renmaitong.SubMitLocation$3$1 -> com.zlq.renmaitong.dm:
-    com.zlq.renmaitong.SubMitLocation$3 this$1 -> a
-    java.lang.String val$_content_cx -> b
-    java.lang.String val$_content_kf -> c
-    java.lang.String val$_content_kh -> d
-    void run() -> run
-com.zlq.renmaitong.SubMitLocation$4 -> com.zlq.renmaitong.dn:
-    com.zlq.renmaitong.SubMitLocation this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SubMitLocation$5 -> com.zlq.renmaitong.do:
-    com.zlq.renmaitong.SubMitLocation this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SubMitLocation$6 -> com.zlq.renmaitong.dp:
+com.zlq.renmaitong.SubMitLocation$2 -> com.zlq.renmaitong.dl:
     com.zlq.renmaitong.SubMitLocation this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.zlq.renmaitong.SubMitLocation$7 -> com.zlq.renmaitong.dq:
+com.zlq.renmaitong.SubMitLocation$3 -> com.zlq.renmaitong.dm:
+    com.zlq.renmaitong.SubMitLocation this$0 -> a
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+com.zlq.renmaitong.SubMitLocation$4 -> com.zlq.renmaitong.dn:
+    java.lang.String _content_sw -> b
+    java.lang.String _content_xw -> c
+    com.zlq.renmaitong.SubMitLocation this$0 -> a
+    void onClick(android.view.View) -> onClick
+    java.lang.String access$0(com.zlq.renmaitong.SubMitLocation$4) -> a
+    java.lang.String access$1(com.zlq.renmaitong.SubMitLocation$4) -> b
+    com.zlq.renmaitong.SubMitLocation access$2(com.zlq.renmaitong.SubMitLocation$4) -> c
+com.zlq.renmaitong.SubMitLocation$4$1 -> com.zlq.renmaitong.do:
+    com.zlq.renmaitong.SubMitLocation$4 this$1 -> a
+    java.lang.String val$_content_cx -> b
+    java.lang.String val$_content_kf -> c
+    java.lang.String val$_content_kh -> d
+    void run() -> run
+com.zlq.renmaitong.SubMitLocation$5 -> com.zlq.renmaitong.dp:
+    com.zlq.renmaitong.SubMitLocation this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.zlq.renmaitong.SubMitLocation$6 -> com.zlq.renmaitong.dq:
+    com.zlq.renmaitong.SubMitLocation this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.zlq.renmaitong.SubMitLocation$7 -> com.zlq.renmaitong.dr:
+    com.zlq.renmaitong.SubMitLocation this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+com.zlq.renmaitong.SubMitLocation$8 -> com.zlq.renmaitong.ds:
+    com.zlq.renmaitong.SubMitLocation this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+com.zlq.renmaitong.SubMitLocation$9 -> com.zlq.renmaitong.dt:
     com.zlq.renmaitong.SubMitLocation this$0 -> a
     java.lang.String val$_content_cx -> b
     java.lang.String val$_content_kf -> c
     java.lang.String val$_content_kh -> d
-    java.lang.String val$_content_qt -> e
+    java.lang.String val$_content_sw -> e
+    java.lang.String val$_content_xw -> f
     void run() -> run
 com.zlq.renmaitong.SystemSetting -> com.zlq.renmaitong.SystemSetting:
     android.widget.ImageButton informationReport -> a
@@ -6405,25 +6433,25 @@ com.zlq.renmaitong.SystemSetting -> com.zlq.renmaitong.SystemSetting:
     void onResume() -> onResume
     android.widget.ImageButton access$0(com.zlq.renmaitong.SystemSetting) -> a
     void access$1(com.zlq.renmaitong.SystemSetting) -> b
-com.zlq.renmaitong.SystemSetting$1 -> com.zlq.renmaitong.dr:
+com.zlq.renmaitong.SystemSetting$1 -> com.zlq.renmaitong.du:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SystemSetting$2 -> com.zlq.renmaitong.ds:
+com.zlq.renmaitong.SystemSetting$2 -> com.zlq.renmaitong.dv:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SystemSetting$3 -> com.zlq.renmaitong.dt:
+com.zlq.renmaitong.SystemSetting$3 -> com.zlq.renmaitong.dw:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SystemSetting$4 -> com.zlq.renmaitong.du:
+com.zlq.renmaitong.SystemSetting$4 -> com.zlq.renmaitong.dx:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SystemSetting$5 -> com.zlq.renmaitong.dv:
+com.zlq.renmaitong.SystemSetting$5 -> com.zlq.renmaitong.dy:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.SystemSetting$6 -> com.zlq.renmaitong.dw:
+com.zlq.renmaitong.SystemSetting$6 -> com.zlq.renmaitong.dz:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zlq.renmaitong.SystemSetting$7 -> com.zlq.renmaitong.dx:
+com.zlq.renmaitong.SystemSetting$7 -> com.zlq.renmaitong.ea:
     com.zlq.renmaitong.SystemSetting this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.zlq.renmaitong.Test2 -> com.zlq.renmaitong.Test2:
@@ -6431,7 +6459,7 @@ com.zlq.renmaitong.Test2 -> com.zlq.renmaitong.Test2:
     void onCreate(android.os.Bundle) -> onCreate
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void letCamera() -> a
-com.zlq.renmaitong.Test2$1 -> com.zlq.renmaitong.dy:
+com.zlq.renmaitong.Test2$1 -> com.zlq.renmaitong.eb:
     com.zlq.renmaitong.Test2 this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zlq.renmaitong.Test3 -> com.zlq.renmaitong.Test3:
@@ -6443,7 +6471,7 @@ com.zlq.renmaitong.Test3 -> com.zlq.renmaitong.Test3:
     void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
     void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
     android.hardware.Camera access$0(com.zlq.renmaitong.Test3) -> a
-com.zlq.renmaitong.Test3$1 -> com.zlq.renmaitong.dz:
+com.zlq.renmaitong.Test3$1 -> com.zlq.renmaitong.ec:
     com.zlq.renmaitong.Test3 this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zlq.renmaitong.Test4 -> com.zlq.renmaitong.Test4:
@@ -6455,13 +6483,13 @@ com.zlq.renmaitong.Test4 -> com.zlq.renmaitong.Test4:
     void access$0(com.zlq.renmaitong.Test4) -> a
     void access$1(com.zlq.renmaitong.Test4) -> b
     void access$2(com.zlq.renmaitong.Test4) -> c
-com.zlq.renmaitong.Test4$1 -> com.zlq.renmaitong.ea:
+com.zlq.renmaitong.Test4$1 -> com.zlq.renmaitong.ed:
     com.zlq.renmaitong.Test4 this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.Test4$2 -> com.zlq.renmaitong.eb:
+com.zlq.renmaitong.Test4$2 -> com.zlq.renmaitong.ee:
     com.zlq.renmaitong.Test4 this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zlq.renmaitong.Test4$3 -> com.zlq.renmaitong.ec:
+com.zlq.renmaitong.Test4$3 -> com.zlq.renmaitong.ef:
     com.zlq.renmaitong.Test4 this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zlq.renmaitong.Test5 -> com.zlq.renmaitong.Test5:

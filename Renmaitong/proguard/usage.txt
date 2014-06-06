@@ -1090,14 +1090,14 @@ com.zlq.renmaitong.CrashHandler$1
 com.zlq.renmaitong.CustomDialog
 com.zlq.renmaitong.FileUploadService
 com.zlq.renmaitong.InformationReport:
-    737:792:private void getGps2()
-    1517:1529:void upGps()
-    735:735:static synthetic void access$35(com.zlq.renmaitong.InformationReport)
+    747:802:private void getGps2()
+    1609:1621:void upGps()
+    745:745:static synthetic void access$35(com.zlq.renmaitong.InformationReport)
 com.zlq.renmaitong.InformationReport$24
 com.zlq.renmaitong.MainActivity:
     public static final int MB_2_BYTE
     public static final int KB_2_BYTE
-    625:628:void showDialog()
+    663:666:void showDialog()
 com.zlq.renmaitong.R
 com.zlq.renmaitong.R$anim
 com.zlq.renmaitong.R$array
@@ -1115,9 +1115,9 @@ com.zlq.renmaitong.RecorderActivity:
     java.util.Timer mTimer
     android.widget.ListView mListView1
 com.zlq.renmaitong.SubMitLocation:
-    264:264:private void exists()
+    440:440:private void exists()
 com.zlq.renmaitong.Test2:
-    59:61:private void takePicture()
+    58:60:private void takePicture()
 com.zlq.renmaitong.Test3:
     public static final int MAX_WIDTH
     public static final int MAX_HEIGHT
