@@ -158,6 +158,7 @@ public class MediaController extends FrameLayout {
 		return ((LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.mediacontroller, this);
 	}
 
+	@SuppressLint("WrongViewCast")
 	private void initControllerView(View v) {
 		mPauseButton = (ImageButton) v.findViewById(R.id.mediacontroller_play_pause);
 		if (mPauseButton != null) {
