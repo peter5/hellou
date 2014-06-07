@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="AM："
+                        android:text="上午/下午："
                         android:textColor="@color/gray" />
                     
                      <EditText
@@ -248,14 +248,14 @@
                         android:textCursorDrawable="@null"
 				        android:text=""
 				        android:singleLine="false" 
-				        android:lines="5"
-				        android:maxLines="5"
+				        android:lines="8"
+				        android:maxLines="8"
                         android:textColor="#232323"
 				        android:gravity="start"
 				        android:ems="10" 
 				        android:maxEms="10"
 				        android:textSize="14sp"
-				        android:maxLength="100">
+				        android:maxLength="200">
 				    </EditText>
                 </LinearLayout>
 
@@ -270,7 +270,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="PM："
+                        android:text="特殊说明："
                         android:textColor="@color/gray" />
 
 
@@ -286,8 +286,8 @@
                         android:textCursorDrawable="@null"
 				        android:text=""
 				        android:singleLine="false"
-				        android:lines="5"
-				        android:maxLines="5"
+				        android:lines="3"
+				        android:maxLines="3"
                         android:textColor="#232323"
 				        android:gravity="start"
 				        android:ems="10" 

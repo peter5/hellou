@@ -150,15 +150,15 @@ public class SubMitLocation extends Activity {
 					return;
 				}
 				if (_content_sw.equals("")) {
-					Toast.makeText(SubMitLocation.this, "AM不能为空！",
+					Toast.makeText(SubMitLocation.this, "\"上午/下午\"不能为空！",
 							Toast.LENGTH_SHORT).show();
 					return;
 				}
-				if (_content_xw.equals("")) {
-					Toast.makeText(SubMitLocation.this, "PM不能为空！",
-							Toast.LENGTH_SHORT).show();
-					return;
-				}
+//				if (_content_xw.equals("")) {
+//					Toast.makeText(SubMitLocation.this, "\"特殊说明\"不能为空！",
+//							Toast.LENGTH_SHORT).show();
+//					return;
+//				}
 
 				progressDialog = ProgressDialog.show(SubMitLocation.this, null,
 						"正在上传..", true, true);
@@ -249,10 +249,10 @@ public class SubMitLocation extends Activity {
 				20) });
 		content_et_SW
 				.setFilters(new InputFilter[] { new InputFilter.LengthFilter(
-						100) });
+						200) });
 		content_et_XW
 				.setFilters(new InputFilter[] { new InputFilter.LengthFilter(
-						100) });
+						20) });
 
 		iv_pic = (ImageView) findViewById(R.id.iv_picture);
 
@@ -269,7 +269,7 @@ public class SubMitLocation extends Activity {
 			public void afterTextChanged(Editable s) {
 				int lines = content_et_SW.getLineCount();
 				// 限制最大输入行数
-				if (lines > 5 ) {
+				if (lines > 10 ) {
 					String str = s.toString();
 					int cursorStart = content_et_SW.getSelectionStart();
 					int cursorEnd = content_et_SW.getSelectionEnd();
@@ -301,7 +301,7 @@ public class SubMitLocation extends Activity {
 			public void afterTextChanged(Editable s) {
 				int lines = content_et_XW.getLineCount();
 				// 限制最大输入行数
-				if (lines > 5 ) {
+				if (lines > 3 ) {
 					String str = s.toString();
 					int cursorStart = content_et_XW.getSelectionStart();
 					int cursorEnd = content_et_XW.getSelectionEnd();
